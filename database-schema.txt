@@ -1,0 +1,51 @@
+Table Questions{
+  id int [pk, increment]
+  title varchar
+  content text
+  views int
+  userId int
+}
+
+Table Follows{
+  id int [pk, increment]
+  questionId int
+  userId int
+}
+
+Table Answers{
+  id int [pk, increment]
+  content text
+  upVotes int
+  donwVotes int
+  userId int
+}
+
+Table Comments{
+  id int [pk, increment]
+  content text
+  upVotes int
+  donwVotes int
+  userId int
+  answerId int
+}
+
+Table Users{
+  id int [pk, increment]
+  firstName varchar
+  lastName varchar
+  email varchar
+  username varchar
+}
+
+Table Topic{
+  id int [pk, increment]
+}
+
+Table SubComments{
+  id int [pk, increment]
+  content text
+  upVotes int
+  donwVotes int
+  userId int
+  commentId int
+}
