@@ -4,9 +4,10 @@ Table Questions{
   content text
   views int
   userId int
+  topicId int
 }
 
-Table Follows{
+Table FollowsBONUS{
   id int [pk, increment]
   questionId int
   userId int
@@ -15,18 +16,15 @@ Table Follows{
 Table Answers{
   id int [pk, increment]
   content text
-  upVotes int
-  donwVotes int
   userId int
+  questionId int
 }
 
 Table Comments{
   id int [pk, increment]
   content text
-  upVotes int
-  donwVotes int
-  userId int
   answerId int
+  userId int
 }
 
 Table Users{
@@ -35,13 +33,15 @@ Table Users{
   lastName varchar
   email varchar
   username varchar
+  password password
 }
 
 Table Topic{
   id int [pk, increment]
+  name varchar
 }
 
-Table SubComments{
+Table SubCommentsBONUS{
   id int [pk, increment]
   content text
   upVotes int
@@ -49,3 +49,17 @@ Table SubComments{
   userId int
   commentId int
 }
+
+
+
+Ref: "Answers"."questionId" < "Questions"."id"
+
+Ref: "Answers"."userId" < "Users"."id"
+
+Ref: "Comments"."answerId" < "Answers"."id"
+
+Ref: "Topic"."id" < "Questions"."topicId"
+
+Ref: "Questions"."userId" < "Users"."id"
+
+Ref: "Users"."id" < "Comments"."userId"
