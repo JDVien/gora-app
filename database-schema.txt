@@ -52,14 +52,14 @@ Table SubCommentsBONUS{
 
 
 
-Ref: "Answers"."questionId" < "Questions"."id"
+Ref: "Answers"."questionId" > "Questions"."id"
 
-Ref: "Answers"."userId" < "Users"."id"
+Ref: "Answers"."userId" > "Users"."id"
 
-Ref: "Comments"."answerId" < "Answers"."id"
+Ref: "Comments"."answerId" > "Answers"."id"
 
 Ref: "Topic"."id" < "Questions"."topicId"
 
-Ref: "Questions"."userId" < "Users"."id"
+Ref: "Questions"."userId" > "Users"."id"
 
 Ref: "Users"."id" < "Comments"."userId"
