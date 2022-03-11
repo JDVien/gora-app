@@ -2,7 +2,9 @@ Table Questions{
   id int [pk, increment]
   title varchar
   content text
+  imageUrl varchar
   follows int
+  upvotes int
   userId int
   topicId int
 }
@@ -49,6 +51,11 @@ Table SubComments{
   commentId int
 }
 
+Table Upvotes{
+  id int [pk, increment]
+  questionId int
+  userId int
+}
 
 
 Ref: "Answers"."questionId" > "Questions"."id"
@@ -70,3 +77,7 @@ Ref: "Follows"."userId" < "Users"."id"
 Ref: "Users"."id" < "SubComments"."userId"
 
 Ref: "Comments"."subCommentId" < "SubComments"."commentId"
+
+Ref: "Upvotes"."questionId" < "Questions"."upvotes"
+
+Ref: "Users"."id" < "Upvotes"."userId"
