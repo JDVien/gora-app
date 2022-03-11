@@ -78,6 +78,6 @@ Ref: "Users"."id" < "SubComments"."userId"
 
 Ref: "Comments"."subCommentId" < "SubComments"."commentId"
 
-Ref: "Upvotes"."questionId" < "Questions"."upvotes"
+Ref: "Upvotes"."questionId" > "Questions"."upvotes"
 
 Ref: "Users"."id" < "Upvotes"."userId"
