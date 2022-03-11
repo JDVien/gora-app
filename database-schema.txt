@@ -42,6 +42,7 @@ Table Users{
 Table Topic{
   id int [pk, increment]
   name varchar
+  imgLink varchar
 }
 
 Table SubComments{
@@ -81,3 +82,5 @@ Ref: "Comments"."subCommentId" < "SubComments"."commentId"
 Ref: "Upvotes"."questionId" > "Questions"."upvotes"
 
 Ref: "Users"."id" < "Upvotes"."userId"
+
+Ref: "Questions"."imageUrl" - "Topic"."imgLink"
