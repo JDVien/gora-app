@@ -19,6 +19,10 @@ module.exports = {
       views: {
         type: Sequelize.INTEGER
       },
+      imgLink: {
+        type: Sequelize.STRING(255),
+        allowNull: false
+      },
       userId: {
         references: { model: "Users"},
         allowNull: false,

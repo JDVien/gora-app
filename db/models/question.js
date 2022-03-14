@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     views: {
       type: DataTypes.INTEGER
     },
+    imgLink: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
     userId: {
       references: { model: "Users"},
       allowNull: false,
