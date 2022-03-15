@@ -1,11 +1,34 @@
-extends layout
-
-append head
-  //- add page specific styles by appending to the head
-  link(rel="stylesheet" href="/stylesheets/index.css")
-  //- add page specific js
-  script(src="/javascripts/index.js" type="module" defer)
-
-block content
-  h1= title
-  p This will be the Questions page
+doctype html
+html
+  head
+      block head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Gora - #{title}
+        link(rel='stylesheet' href='/stylesheets/reset.css')
+        script(src='/javascripts/index.js' type='module' defer)
+  body
+    div(class='container-one')
+      div(class='image-div')
+        //- images going past
+    div(class='container-two')
+      //- Fix the image link below
+      img(src='bloody-g.png' alt='Gora Logo')
+      h1(id='Name') ORA
+      ul(class='objects-div')
+        li(class='main-nav')
+          div(class='search-container')
+            form(action="  ")
+              input(id="search-bar" type="search" placeholder="Search...")
+              button(type="submit") Image
+        li(class='main-nav')
+          a(id="user-login" href="/users/login") Log In
+        li(class='main-nav')
+          a(id="user-signup" href="/users/register") Sign Up
+        li(class='main-nav')
+          //- TODO Log in as DEMO...
+          a(id="demo-login" href="/questions") Demo
+        li(class='main-nav')
+          a(id="continue" href="/questions") Continue To Site
+        li(class='main-nav')
+          h3 Footers
