@@ -2,7 +2,39 @@ doctype html
 html
   head
       block head
-        title="Express Starter App"
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Gora - #{title}
         link(rel='stylesheet' href='/stylesheets/reset.css')
   body
+    div(class='horizontal-nav')
+      ul
+        li(class='top-nav')
+          p(id="banner") #{topic} Banner
+        li(class='top-nav')
+          div(class='search-container')
+            form(action="  ")
+              input(id="search-bar" type="search" placeholder="Search...")
+              button(type="submit") Image
+        li(class='top-nav')
+          a(id="demo-login" href="/questions") Demo
+        li(class='top-nav')
+          a(id="user-login" href="/questions") Login
+        li(class='top-nav')
+          a(id="user-logout" href="/questions") Logout
+        li(class='top-nav')
+    div(class='vertical-nav')
+      ul
+        li(class='nav-item')
+          a(id="logo" href="/") Logo
+        li(class='nav-item')
+          a(id="all" href="/questions") All
+        li(class='nav-item')
+          a(id="cinema" href="/topics/1/questions") Cinema
+        li(class='nav-item')
+          a(id="literature" href="/topics/2/questions") Literature
+        li(class='nav-item')
+          a(id="gaming" href="/topics/3/questions") Gaming
+
+
     block content
