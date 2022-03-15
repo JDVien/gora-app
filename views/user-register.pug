@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    include utils.pug
+    +validationErrorSummary(errors)
+    form(action='/users/register' method='post')
+        div
+            input(type='hidden' name='_csrf' value=csrfToken)
+            +field('First Name', 'firstName', user.firstName)
+            +field('Last Name', 'lastName', user.lastName)
+            +field('Username', 'username', user.username)
+            +field('Email Address', 'email', user.email)
+            +field('Password', 'password', user.password, 'password')
+            +field('Confirm Password', 'confirmPassword', '', 'password')
+            button(type='submit' class='submit-button') Submit
+            a(href='/' class='cancel-button') Cancel
