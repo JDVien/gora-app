@@ -1,21 +1,28 @@
+include utils.pug
 doctype html
 html
   head
+      block head
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
         title Gora - #{title}
         link(rel='stylesheet' href='/stylesheets/signup.css')
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
   body
-    include utils.pug
-    +validationErrorSummary(errors)
-    form(action='/users/register' method='post')
-        div(class='signup-form') GORA - Sign Up
-            input(type='hidden' name='_csrf' value=csrfToken)
-            +field('First Name', 'firstName', user.firstName)
-            +field('Last Name', 'lastName', user.lastName)
-            +field('Username', 'username', user.username)
-            +field('Email Address', 'email', user.email)
-            +field('Password', 'password', user.password, 'password')
-            +field('Confirm Password', 'confirmPassword', '', 'password')
-            button(type='submit' class='submit-button') Submit
-            a(href='/' class='cancel-button') Cancel
+    div(class='signup-bg-img')
+      +validationErrorSummary(errors)
+      form(action='/users/register' method='post' class='form-container')
+          div(class='signup-form') GORA - Sign Up
+              input(type='hidden' name='_csrf' value=csrfToken)
+              +field('First Name', 'firstName', user.firstName)
+              +field('Last Name', 'lastName', user.lastName)
+              +field('Username', 'username', user.username)
+              +field('Email Address', 'email', user.email)
+              +field('Password', 'password', user.password, 'password')
+              +field('Confirm Password', 'confirmPassword', '', 'password')
+              button(type='submit' class='submit-button') Sign Up
+              a(href='/' class='cancel-button') Cancel
+
+block content
