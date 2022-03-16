@@ -19,7 +19,7 @@ router.get('/', asyncHandler(async (req, res) => {
 router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const questionId = parseInt(req.params.id, 10);
     const question = await db.Question.findByPk(questionId, {
-        include: { model: db.Answer, include: { model: db.Comment } }
+        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User}} }
     });
     let activeUser;
     if (req.session.auth.userId){
