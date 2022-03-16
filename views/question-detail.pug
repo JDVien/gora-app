@@ -5,6 +5,7 @@ block content
     div(id='detail-container')
         h2= question.title
             h3= question.content
+    div
         if activeUser === question.userId
             button(class='delete-button' id=`delete-question-${question.id}`) Delete
             button(class='edit-button' id=`edit-question-${question.id}`) Edit
