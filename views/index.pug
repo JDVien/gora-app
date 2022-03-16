@@ -8,27 +8,21 @@ html
         link(rel='stylesheet' href='/stylesheets/reset.css')
         script(src='/javascripts/index.js' type='module' defer)
   body
-    div(class='container-one')
-      div(class='image-div')
-        //- images going past
-    div(class='container-two')
-      //- Fix the image link below
-      img(src='bloody-g.png' alt='Gora Logo')
-      h1(id='Name') ORA
-      ul(class='objects-div')
-        li(class='main-nav')
-          div(class='search-container')
-            form(action="  ")
-              input(id="search-bar" type="search" placeholder="Search...")
-              button(type="submit") Image
-        li(class='main-nav')
-          a(id="user-login" href="/users/login") Log In
-        li(class='main-nav')
-          a(id="user-signup" href="/users/register") Sign Up
-        li(class='main-nav')
-          //- TODO Log in as DEMO...
-          a(id="demo-login" href="/questions") Demo
-        li(class='main-nav')
-          a(id="continue" href="/questions") Continue To Site
-        li(class='main-nav')
-          h3 Footers
+    div(class='grid-container')
+      div(class='container-two')
+        img(src='/images/bloody-g.png' id='gora-logo' alt='Gora Logo' width='75px')
+        h1(id='Name') ORA
+      div(class='search-container')
+        form(action="  ")
+          input(id="search-bar" type="search" placeholder="Search...")
+          button(type="submit") Image
+      div(class='user-login')
+        a(id="user-login" href="/users/login") Log In
+      div(class='user-signup')
+        a(id="user-signup" href="/users/register") Sign Up
+      div(class='demo-login')
+        a(id="demo-login" href="/questions") Demo
+      div(class='continue')
+        a(id="continue" href="/questions") Continue To Site
+      div(class='main-nav')
+        h3 Footers
