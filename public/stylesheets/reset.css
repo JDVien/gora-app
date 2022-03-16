@@ -50,9 +50,3 @@ h1 {
 .icon {
   margin-right: 10px;
 }
-.signup-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
