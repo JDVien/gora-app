@@ -16,7 +16,7 @@ body {
     ". logo ."
     "login . signup"
     ". search ."
-    "demo . continue";
+    ". demo .";
 }
 .logo-container {
   grid-area: logo;
