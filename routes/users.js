@@ -111,12 +111,6 @@ router.get('/login', csrfProtection, asyncHandler(async(req, res, next) => {
   res.render('user-login', { title: 'Log In', csrfToken: req.csrfToken() });
 }));
 
-//GET users/login-demo
-router.get("/users/login/demo", async(req, res) => {
-  let user = await db.User.findByPk(5)
-  loginUser(req, res, user);
-  res.redirect("/questions");
-})
 
 //POST users/login
 router.post('/login', loginValidators, csrfProtection, asyncHandler(async(req, res) => {
@@ -144,8 +138,15 @@ router.post('/login', loginValidators, csrfProtection, asyncHandler(async(req, r
   })
 }));
 
+//GET users/login-demo
+router.get("/login/demo", async(req, res) => {
+  let user = await db.User.findByPk(5)
+  loginUser(req, res, user);
+  return res.redirect("/questions");
+})
+
 //GET users/logout
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   logoutUser(req, res);
   res.redirect('/');
 });
