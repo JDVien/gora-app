@@ -98,7 +98,7 @@ router.post('/register', userValidators, csrfProtection, asyncHandler(async(req,
     user.hashedPassword = hashedPassword;
     await user.save();
     loginUser(req, res, user);
-    res.redirect('/');
+    res.redirect('/questions');
   } else {
     const errors = validatorErrors.array().map(error => error.msg);
     console.log(errors)
@@ -111,6 +111,13 @@ router.get('/login', csrfProtection, asyncHandler(async(req, res, next) => {
   res.render('user-login', { title: 'Log In', csrfToken: req.csrfToken() });
 }));
 
+//GET users/login-demo
+router.get("/users/login/demo", async(req, res) => {
+  let user = await db.User.findByPk(5)
+  loginUser(req, res, user);
+  res.redirect("/questions");
+})
+
 //POST users/login
 router.post('/login', loginValidators, csrfProtection, asyncHandler(async(req, res) => {
   const { email, password } = req.body;
@@ -122,7 +129,7 @@ router.post('/login', loginValidators, csrfProtection, asyncHandler(async(req, r
       const passwordMatch = await bcrypt.compare(password, user.hashedPassword.toString());
       if (passwordMatch){
         loginUser(req, res, user);
-        return res.redirect('/');
+        return res.redirect('/questions');
       }
     }
     errors.push('Login failed for the provided email and password.')

@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+    script(src='/javascripts/question-details.js' type='module')
+    div(id='detail-container')
+        h2= question.title
+            h3= question.content
+        if activeUser === question.userId
+            button(class='delete-button' id=`delete-question-${question.id}`) Delete
+            button(class='edit-button' id=`edit-question-${question.id}`) Edit
+            form(class='hidden' id=`edit-form-${question.id}`)
+                label(for='title') Title:
+                input(type='text' name='title' value=question.title)
+                label(for="content") Content:
+                input(type="text" name='content' value=question.content)
+                label(for='imgLink') Image Link:
+                input(type='text' name='imgLink' value=question.imgLink)
+                button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
