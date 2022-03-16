@@ -1,16 +1,24 @@
-extends layout.pug
-
 include utils.pug
-
-block content
-    +validationErrorSummary(errors)
-    form(action='/users/login' method='post')
-      div
-        input(type='hidden' name='_csrf' value=csrfToken)
-        +field('Email Address', 'email', email)
-        +field('Password', 'password', null, 'password')
-        div(class='button-class')
-          button(type='submit' class='button-login') Log In
-          a(href='/' class='cancel-button') Cancel
-    div
-      p: a(href='/users/register') Don't have an account?
+doctype html
+html
+  head
+      block head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Gora - #{title}
+        link(rel='stylesheet' href='/stylesheets/login.css')
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
+  body
+    div(class='bg-img')
+      +validationErrorSummary(errors)
+      form(action='/users/login' method='post' class='form-container')
+        div
+          input(type='hidden' name='_csrf' value=csrfToken)
+          +field('Email Address', 'email', email)
+          +field('Password', 'password', null, 'password')
+          div(class='button-class')
+            button(type='submit' class='button-login') Log In
+            a(href='/' class='cancel-button') Cancel
+        p:  a(href='/users/register') Don't have an account?
