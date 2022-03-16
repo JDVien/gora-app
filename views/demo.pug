@@ -13,7 +13,7 @@ html
   body
     div(class='bg-img')
       +validationErrorSummary(errors)
-      form(action='/users/login' method='post' class='form-container')
+      form(action='/users/login/demo' method='post' class='form-container')
         div
           input(type='hidden' name='_csrf' value=csrfToken)
           +field('Email Address', 'email', email)
