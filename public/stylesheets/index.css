@@ -16,13 +16,14 @@ body {
     ". logo ."
     "login . signup"
     ". search ."
-    "demo . continue";
+    ". demo .";
   }
   .logo-container {
     grid-area: logo;
     display: inline-flex;
     align-items: center;
     font-family: 'Nosifer', cursive;
+
   }
   .user-login {
     grid-area: login;
@@ -35,6 +36,7 @@ body {
   }
   .demo-login {
     grid-area: demo;
+    padding: 100px;
   }
   .continue {
     grid-area: continue;
