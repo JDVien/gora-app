@@ -1,23 +1,28 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
-
-
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 .grid-container {
   text-align: center;
-
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40% 1fr 1fr 1fr;
   grid-template-areas:
-    ". logo ."
-    "login . signup"
-    ". search ."
-    "demo . continue";
+  ". logo ."
+  "login . signup"
+  ". search ."
+  "demo . continue";
 }
-.container-two {
+.logo-container {
   grid-area: logo;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Creepster', cursive;
 }
 .user-login {
   grid-area: login;
@@ -34,12 +39,26 @@ body {
 .continue {
   grid-area: continue;
 }
+.bttn-links {
+  font-size: 40px;
+  padding: 20px 40px;
+  background-color: rgb(105, 104, 104);
+}
+#gora-logo {
+  width: 75%;
+  height: 75%;
+}
+#logo-name {
+  font-size: 100px;
+}
 a {
   color: #00B7FF;
 }
 
 * {
   box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: 'Creepster', cursive;
 }
 
 h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
@@ -56,8 +75,4 @@ body, header, nav {
 h1 {
   font-size: 2rem;
   color: rgb(182, 15, 48);
-}
-
-.container-two {
-  display: inline-flex;
 }

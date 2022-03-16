@@ -6,23 +6,27 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
         title Gora - #{title}
         link(rel='stylesheet' href='/stylesheets/reset.css')
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
         script(src='/javascripts/index.js' type='module' defer)
   body
     div(class='grid-container')
-      div(class='container-two')
+      div(class='logo-container')
         img(src='/images/bloody-g.png' id='gora-logo' alt='Gora Logo' width='75px')
-        h1(id='Name') ORA
+        h1(id='logo-name') ORA
       div(class='search-container')
         form(action="  ")
-          input(id="search-bar" type="search" placeholder="Search...")
-          button(type="submit") Image
+          input(id="search-bar" class="bttn-links" type="search" placeholder="Search...")
+          button(type="submit" class="bttn-links") Image
       div(class='user-login')
-        a(id="user-login" href="/users/login") Log In
+        a(id="user-login" class="bttn-links" href="/users/login") Log In
       div(class='user-signup')
-        a(id="user-signup" href="/users/register") Sign Up
+        a(id="user-signup" class="bttn-links" href="/users/register") Sign Up
       div(class='demo-login')
-        a(id="demo-login" href="/questions") Demo
+        a(id="demo-login" class="bttn-links" href="/questions") Demo
       div(class='continue')
-        a(id="continue" href="/questions") Continue To Site
-      div(class='main-nav')
-        h3 Footers
+        a(id="continue" class="bttn-links" href="/questions") Continue To Site
+  footer
+    p JavaScript, Nodejs, Express, Pug, CSS, HTML
