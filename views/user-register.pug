@@ -4,7 +4,7 @@ block content
     include utils.pug
     +validationErrorSummary(errors)
     form(action='/users/register' method='post')
-        div(class='signup-form')
+        div(class='signup-form') GORA - Sign Up
             input(type='hidden' name='_csrf' value=csrfToken)
             +field('First Name', 'firstName', user.firstName)
             +field('Last Name', 'lastName', user.lastName)
