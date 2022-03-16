@@ -1,8 +1,39 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
+
+
+}
+.grid-container {
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". logo ."
+    "login . signup"
+    ". search ."
+    "demo . continue";
+}
+.container-two {
+  grid-area: logo;
+}
+.user-login {
+  grid-area: login;
+}
+.user-signup {
+  grid-area: signup;
+}
+.search-container {
+  grid-area: search;
+}
+.demo-login {
+  grid-area: demo;
+}
+.continue {
+  grid-area: continue;
+}
 a {
   color: #00B7FF;
 }
@@ -24,4 +55,9 @@ body, header, nav {
 
 h1 {
   font-size: 2rem;
+  color: rgb(182, 15, 48);
+}
+
+.container-two {
+  display: inline-flex;
 }
