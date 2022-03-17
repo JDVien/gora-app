@@ -4,7 +4,7 @@ block content
     script(src='/javascripts/questions.js' type='module')
     div
         for question in allQuestions
-            div(class='question-divs' id=`question-container-${question.id}` style={'padding': '20px', 'border': '4px solid black'})
+            div(class='question-divs' id=`question-container-${question.id}` style={'padding-top': '100px', 'padding-left': '100px','padding': '20px', 'border': '4px solid black'})
                 a= question.title
                 a= question.content
                 img(src=question.imgLink)

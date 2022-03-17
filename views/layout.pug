@@ -9,28 +9,24 @@ html
         link(rel='stylesheet' href='/stylesheets/reset.css')
   body
     div(class='horizontal-nav')
-      ul
-        li(class='top-nav')
-          p(id="banner") #{topic} Banner
+      div(class='top-items')
+        p(id="banner") #{topic} Banner
+      div(class='top-items')
         if (locals.authenticated)
-          li(class='top-nav')
-            a(href='/questions/new' id='ask-a-question') Ask a Question
-        li(class='top-nav')
-          div(class='search-container')
-            form(action="/search-results")
-              input(id="search-bar" type="search" name="term" placeholder="Search..." required)
-              button(type="submit") Search Questions
+          a(href='/questions/new' id='ask-a-question') Ask a Question
+      div(class='top-items')
+        div(class='search-container')
+          form(action="/search-results")
+          input(id="search-bar" type="search" name="term" placeholder="Search..." required)
+          button(type="submit") Search Questions
+      div(class='top-items')
         if !(locals.authenticated)
-          li(class='top-nav')
-            a(id="demo-login" href="/users/login/demo") Demo
-          li(class='top-nav')
-            a(id="user-login" href="/users/login") Log In
+          a(id="demo-login" href="/users/login/demo") Demo
+          a(id="user-login" href="/users/login") Log In
         else
-          li(class='top-nav')
-            a(id='profile' href=`/profile/${user.id}`) Profile
-          li(class='top-nav')
-            form(id='user-logout' action='/users/logout' method='post')
-              button(id='user-logout' type='submit') Logout
+          a(id='profile' href=`/profile/${user.id}`) Profile
+          form(id='user-logout' action='/users/logout' method='post')
+            button(id='user-logout' type='submit') Logout
 
     div(class='vertical-nav')
       ul

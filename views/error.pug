@@ -20,6 +20,6 @@ body
     img(src='/images/grim2.png' id='grim2' alt='Reaper' style='background:transparent;')
   div(class='errors')
     div(class='errorName')
-      h1(id='status')= error.status
       h1= message
+      h1(id='status')= error.status
     pre(id='message') #{error.stack}

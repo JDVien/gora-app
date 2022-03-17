@@ -3,13 +3,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
-}
-
-* {
-  box-sizing: border-box;
-}
 /*
 h1, h2, h3, h4, h5, h6, a, ol, li, ul, div, span,
 body, header, nav {
@@ -26,7 +19,48 @@ h1 {
   font-size: 2rem;
   color: rgb(182, 15, 48);
 }
+.vertical-nav {
+  height: 100%;
+  width: 102px;
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  align-items: space-around;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ol,
+li,
+ul,
+div,
+span,
+body,
+header,
+nav {
+  font-size: 1rem;
+  color: inherit;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+  color: rgb(182, 15, 48);
+}
 
 .vertical-nav ul {
   list-style-type: none;
@@ -52,4 +86,63 @@ h1 {
 }
 .hidden {
   display: none;
+}
+
+.horizontal-nav {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  flex-wrap: column;
+  align-items: center;
+  z-index: 1;
+  margin-left: 0px;
+  top: 0;
+  right: 0;
+  overflow-y: hidden;
+  background-color: #881313;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.top-items {
+  justify-self: auto;
+  margin: 10px;
+}
+
+#demo-login {
+  padding: 10px;
+}
+
+#user-login {
+  padding: 10px;
+}
+
+#user-logout {
+  padding: 10px;
+}
+
+#profile {
+  padding: 10px;
+}
+
+a {
+  color: #010047;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Nosifer", cursive;
+}
+
+.horizontal-nav a:hover {
+  background-color: #f70e06;
+  color: #fff;
 }

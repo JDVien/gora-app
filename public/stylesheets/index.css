@@ -29,7 +29,9 @@ body {
 }
 */
 .search-container {
-  padding: 70px;
+  margin-left: 350px;
+  margin-right: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*
 .demo-login {
@@ -42,6 +44,7 @@ body {
   font-size: 40px;
   padding: 20px 40px;
   background-color: rgb(70, 70, 70);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .main-container {
   background-color: black;
@@ -51,20 +54,21 @@ body {
   z-index: -2;
 }
 .logo-container {
+  justify-self: center;
   margin-left: 300px;
   margin-right: 300px;
-  margin-top: 60px;
+  margin-top: 150px;
 }
 #background {
   opacity: 35%;
   width: 200%;
 }
 #gora-logo {
-  width: 35%;
-  height: 70%;
-  padding-left: 70px;
+  width: 30%;
+  height: 65%;
 }
 #logo-name {
+  margin-left: 0px;
   color: rgb(190, 30, 45);
   font-size: 90px;
 }
@@ -113,18 +117,22 @@ h1 {
 
 #search-bar {
   margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #user-login {
   margin: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #user-signup {
   margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #demo-login {
   margin: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .background-image {
