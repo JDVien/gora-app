@@ -48,6 +48,39 @@ router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, re
     res.render('question-detail', { question, title: 'Details', activeUser, csrfToken: req.csrfToken()});
 }));
 
+/* GET Create Question Page */
+router.get('/new', csrfProtection, asyncHandler(async (req, res) => {
+    const question = db.Question.build();
+    const topics = await db.Topic.findAll();
+
+    res.render('create-question', {
+        title: 'Ask a Question',
+        question,
+        topics,
+        csrfToken: req.csrfToken()
+    });
+}));
+
+/* POST New Question  */
+router.post('/new', csrfProtection, questionValidators, requireAuth, asyncHandler(async (req, res) => {
+    const { topicId, title, content, imgLink } = req.body;
+    const question = db.Question.build({ topicId, title, content, imgLink, userId: req.session.auth.userId });
+    const validatorErrors = validationResult(req);
+
+    if (validatorErrors.isEmpty()) {
+      await question.save();
+      res.redirect('/questions');
+    } else {
+      const errors = validatorErrors.array().map((error) => error.msg);
+      res.render('create-question', {
+        title: 'Ask a Question',
+        question,
+        errors,
+        csrfToken: req.csrfToken(),
+      });
+    }
+}));
+
 router.post('/:id(\\d+)', questionValidators, requireAuth, csrfProtection, asyncHandler(async (req, res) => {
     // TODO editing the question
     const questionId = parseInt(req.params.id, 10);
