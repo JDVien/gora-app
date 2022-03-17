@@ -26,7 +26,7 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
         await answer.save();
         res.redirect(`/questions/${questionId}`);
     } else {
-        const errors = validatorErrors.array().map((error) => error.msg);
+        const answerErrors = validatorErrors.array().map((error) => error.msg);
 
         let activeUser;
         if (req.session.auth.userId){
@@ -38,7 +38,7 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
         res.render('question-detail', {
             title: 'Details',
             answer,
-            errors,
+            answerErrors,
             activeUser,
             question: questionToUpdate,
             csrfToken: req.csrfToken(),

@@ -56,3 +56,10 @@ body {
     background-color: #332f2f;
     border-radius: 5px;
 }
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px;
+}

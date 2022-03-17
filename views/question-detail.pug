@@ -15,25 +15,30 @@ block content
             img(src=question.imgLink)
     div(id="form-container")
         if activeUser === question.userId
-            button(class='delete-button' id=`delete-question-${question.id}`) Delete
-            button(class='edit-button' id=`edit-question-${question.id}`) Edit
-            button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
-            form(action=`/answers/new` method='post' class='hidden' id=`answer-form-${question.id}`)
-                input(type='hidden' name='_csrf' value=csrfToken)
-                input(type='hidden' name='questionId' value=question.id)
-                label(for="content") Content:
-                input(type="text" name='content' value='')
-                button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
-            +validationErrorSummary(errors)
-            form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
-                input(type='hidden' name='_csrf' value=csrfToken)
-                label(for='title') Title:
-                input(type='text' name='title' value=question.title)
-                label(for="content") Content:
-                input(type="text" name='content' value=question.content)
-                label(for='imgLink') Image Link:
-                input(type='text' name='imgLink' value=question.imgLink)
-                button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
+            div(id='button-container')
+                div(id='delete-question-btn')
+                    button(class='delete-button' id=`delete-question-${question.id}`) Delete
+                div(id='edit-question-btn')
+                    button(class='edit-button' id=`edit-question-${question.id}`) Edit
+                    +validationErrorSummary(errors)
+                    form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
+                        input(type='hidden' name='_csrf' value=csrfToken)
+                        label(for='title') Title:
+                        input(type='text' name='title' value=question.title)
+                        label(for="content") Content:
+                        input(type="text" name='content' value=question.content)
+                        label(for='imgLink') Image Link:
+                        input(type='text' name='imgLink' value=question.imgLink)
+                        button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
+                div(id='answer-question-btn')
+                    button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
+                    +validationErrorSummary(answerErrors)
+                    form(action=`/answers/new` method='post' class='hidden' id=`answer-form-${question.id}`)
+                        input(type='hidden' name='_csrf' value=csrfToken)
+                        input(type='hidden' name='questionId' value=question.id)
+                        label(for="content") Content:
+                        input(type="text" name='content' value='')
+                        button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
     if question.Answers.length > 0
         for answer in question.Answers
             div(id=`answer-container`)
