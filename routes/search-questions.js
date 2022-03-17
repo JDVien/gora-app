@@ -8,7 +8,7 @@ const { requireAuth } = require('../auth');
 
 const router = express.Router();
 
-// POST search
+// GET search
 router.get('/', async(req, res) => {
   let questions;
   questions = await questionRepo.searchQuestions(`%${req.query.term}%`);

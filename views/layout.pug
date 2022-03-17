@@ -27,6 +27,8 @@ html
             a(id="user-login" href="/users/login") Log In
         else
           li(class='top-nav')
+            a(id='profile' href=`/profile/${user.id}`) Profile
+          li(class='top-nav')
             form(id='user-logout' action='/users/logout' method='post')
               button(id='user-logout' type='submit') Logout
 
