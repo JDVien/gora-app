@@ -26,3 +26,8 @@ block content
                 label(for='imgLink') Image Link:
                 input(type='text' name='imgLink' value=question.imgLink)
                 button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
+    if question.Answers.length > 0
+        for answer in question.Answers
+            div(id=`answer-container`)
+                h3= answer.content
+                p= answer.User.username

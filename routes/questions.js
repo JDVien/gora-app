@@ -35,7 +35,7 @@ router.get('/', asyncHandler(async (req, res) => {
 router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, res) => {
     const questionId = parseInt(req.params.id, 10);
     const question = await db.Question.findByPk(questionId, {
-        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User}} }
+        include: { model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }
     });
     let activeUser;
     if (req.session.auth.userId){
@@ -43,8 +43,7 @@ router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, re
     } else {
         activeUser = null;
     }
-    // console.log('----------------------> \n\n', req.session.auth.userId)
-    // console.log('----------------------> \n\n', question.userId)
+
     res.render('question-detail', { question, title: 'Details', activeUser, csrfToken: req.csrfToken()});
 }));
 
