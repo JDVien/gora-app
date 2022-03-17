@@ -17,7 +17,7 @@ block content
         if activeUser === question.userId
             div(id='button-container')
                 div(id='delete-question-btn')
-                    button(class='delete-button' id=`delete-question-${question.id}`) Delete
+                    a(href=`/questions/delete/${question.id}` onclick="return confirm('Are you sure you want to delete this item?');" class='edit-button' id=`edit-question-${question.id}`) Delete
                 div(id='edit-question-btn')
                     button(class='edit-button' id=`edit-question-${question.id}`) Edit
                     +validationErrorSummary(errors)

@@ -114,6 +114,13 @@ router.post('/:id(\\d+)', questionValidators, requireAuth, csrfProtection, async
         }
         res.render('question-detail', { question, title: 'Details', activeUser, csrfToken: req.csrfToken(), errors});
     }
+}));
+
+router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async (req, res) => {
+    const questionId = parseInt(req.params.id, 10);
+    const question = await db.Question.findByPk(questionId);
+    await question.destroy();
+    res.redirect('/questions');
 }))
 
 module.exports = router;
