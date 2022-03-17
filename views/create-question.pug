@@ -23,9 +23,9 @@ html
                   each topic in topics
                     option(value=topic.id)=topic.name
                 label(for='title') Title:
-                input(type='text' name='title' value=question.title)
+                textarea(name='title' value=question.title)
                 label(for="content") Content:
-                input(type="text" name='content' value=question.content)
+                textarea(name='content' value=question.content)
                 label(for='imgLink') Image Link:
                 input(type='text' name='imgLink' value=question.imgLink)
                 button(type='submit' class='create-submit-btn') Ask Question
