@@ -14,8 +14,9 @@ block content
             img(src=question.imgLink)
     div(id="form-container")
         if activeUser === question.userId
-            button(class='delete-button' id=`delete-question-${question.id}`) Delete
-            button(class='edit-button' id=`edit-question-${question.id}`) Edit
+            //- a(class='delete-button' id=`delete-question-${question.id}` href=`/questions/delete/${question.id}`) Delete
+            a(class='edit-button' id=`edit-question-${question.id}`) Edit
+            a(href=`/questions/delete/${question.id}` onclick="return confirm('Are you sure you want to delete this item?');" class='edit-button' id=`edit-question-${question.id}`) Delete
             +validationErrorSummary(errors)
             form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
                 input(type='hidden' name='_csrf' value=csrfToken)
