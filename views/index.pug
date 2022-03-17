@@ -12,9 +12,14 @@ html
 
         script(src='/javascripts/index.js' type='module' defer)
   body
+    div(class='main-container')
+      img(src='/images/background.jpg' id='background' alt='Main Background')
+    div(class='background-image')
+
+    div(class='background-image-2')
     div(class='grid-container')
       div(class='logo-container')
-        img(src='/images/bloody-g.png' id='gora-logo' alt='Gora Logo' width='75px')
+        img(src='/images/bloody-letter-g.png' id='gora-logo' alt='Gora Logo' width='75px' style="background:transparent;")
         h1(id='logo-name') ORA
       div(class='search-container')
         form(action="/search-results")
