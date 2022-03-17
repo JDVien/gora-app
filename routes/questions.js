@@ -59,7 +59,7 @@ router.get('/new', csrfProtection, (req, res) => {
 });
 
 /* POST New Question  */
-router.post('/new', csrfProtection, questionValidators, (req, res) => {
+router.post('/new', csrfProtection, questionValidators, asyncHandler(async (req, res) => {
     const { title, content, imgLink } = req.body;
 
     const question = db.Question.build({ title, content, imgLink });
@@ -71,14 +71,14 @@ router.post('/new', csrfProtection, questionValidators, (req, res) => {
       res.redirect('/');
     } else {
       const errors = validatorErrors.array().map((error) => error.msg);
-      res.render('/', {
+      res.render('/new', {
         title: 'Ask a Question',
         question,
         errors,
         csrfToken: req.csrfToken(),
       });
     }
-});
+}));
 
 router.post('/edit/:id(\\d+)', csrfProtection, asyncHandler(async (req, res) => {
     // TODO editing the question
