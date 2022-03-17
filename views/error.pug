@@ -1,6 +1,25 @@
-extends layout
+html
+  head
+      block head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Gora - Page Not found
+        link(rel='stylesheet' href='/stylesheets/error.css')
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+        script(src='/javascripts/index.js' type='module' defer)
+
+body
+  div(class='main-container')
+    img(src='/images/background.jpg' id='background' alt='Main Background')
+  div(class='background-image')
+    img(src='/images/grim-reaper.png' id='grim' alt='Grim' style='background:transparent;')
+  div(class='background-image-2')
+    img(src='/images/grim2.png' id='grim2' alt='Reaper' style='background:transparent;')
+  div(class='errors')
+    div(class='errorName')
+      h1(id='status')= error.status
+      h1= message
+    pre(id='message') #{error.stack}
