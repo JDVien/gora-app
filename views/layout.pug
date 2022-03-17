@@ -14,9 +14,9 @@ html
           p(id="banner") #{topic} Banner
         li(class='top-nav')
           div(class='search-container')
-            form(action="  ")
-              input(id="search-bar" type="search" placeholder="Search...")
-              button(type="submit") Image
+            form(action="/search-results")
+              input(id="search-bar" type="search" name="term" placeholder="Search..." required)
+              button(type="submit") Search Questions
         if !(locals.authenticated)
           li(class='top-nav')
             a(id="demo-login" href="/users/login/demo") Demo
