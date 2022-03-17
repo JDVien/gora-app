@@ -1,15 +1,24 @@
 extends layout.pug
 
+include utils.pug
+
 block content
     script(src='/javascripts/question-details.js' type='module')
+    link(rel='stylesheet' href='/stylesheets/edit.css')
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
     div(id='detail-container')
-        h2= question.title
+        h1= question.title
             h3= question.content
-    div
+            img(src=question.imgLink)
+    div(id="form-container")
         if activeUser === question.userId
             button(class='delete-button' id=`delete-question-${question.id}`) Delete
             button(class='edit-button' id=`edit-question-${question.id}`) Edit
-            form(class='hidden' id=`edit-form-${question.id}`)
+            +validationErrorSummary(errors)
+            form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
+                input(type='hidden' name='_csrf' value=csrfToken)
                 label(for='title') Title:
                 input(type='text' name='title' value=question.title)
                 label(for="content") Content:
