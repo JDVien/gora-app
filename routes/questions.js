@@ -71,7 +71,7 @@ router.post('/new', csrfProtection, questionValidators, (req, res) => {
       res.redirect('/');
     } else {
       const errors = validatorErrors.array().map((error) => error.msg);
-      res.render('questions', {
+      res.render('/', {
         title: 'Ask a Question',
         question,
         errors,
