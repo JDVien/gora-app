@@ -1,9 +1,7 @@
 const express = require('express');
-const bcrypt = require('bcryptjs');
 
 const db = require('../db/models');
 const { csrfProtection, asyncHandler} = require('./utils');
-const { validationResult, check } = require('express-validator');
 const { requireAuth } = require('../auth');
 
 const router = express.Router();
@@ -12,14 +10,23 @@ router.get('/', asyncHandler(async (req, res) => {
     const allQuestions = await db.Question.findAll({
         include: { model: db.Answer }
     })
-    console.log(allQuestions[0].Answers)
     res.render('questions.pug', { title: 'Questions', allQuestions})
 }));
 
-router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
+router.get('/:id(\\d+)/questions', requireAuth, asyncHandler(async (req, res) => {
+    const topicId = parseInt(req.params.id, 10)
+    const allQuestions = await db.Question.findAll({
+        where: { topicId },
+        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User}} }
+    });
+    const topic = await db.Topic.findByPk(topicId);
+    res.render('topics', { title: 'Topics', allQuestions, topic});
+}));
+
+router.get('/:id(\\d+)/questions/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     const questionId = parseInt(req.params.id, 10);
     const question = await db.Question.findByPk(questionId, {
-        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User}} }
+        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User} } }
     });
     let activeUser;
     if (req.session.auth.userId){
