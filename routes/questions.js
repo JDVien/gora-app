@@ -48,6 +48,38 @@ router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     res.render('question-detail', { question, title: 'Details', activeUser });
 }));
 
+/* GET Create Question Page */
+router.get('/new', csrfProtection, (req, res) => {
+    const question = db.Question.build();
+    res.render('create-question', {
+        title: 'Ask a Question',
+        question,
+        csrfToken: req.csrfToken()
+    });
+});
+
+/* POST New Question  */
+router.post('/new', csrfProtection, questionValidators, (req, res) => {
+    const { title, content, imgLink } = req.body;
+
+    const question = db.Question.build({ title, content, imgLink });
+
+    const validatorErrors = validationResult(req);
+
+    if (validatorErrors.isEmpty()) {
+      await question.save();
+      res.redirect('/');
+    } else {
+      const errors = validatorErrors.array().map((error) => error.msg);
+      res.render('questions', {
+        title: 'Ask a Question',
+        question,
+        errors,
+        csrfToken: req.csrfToken(),
+      });
+    }
+});
+
 router.post('/edit/:id(\\d+)', csrfProtection, asyncHandler(async (req, res) => {
     // TODO editing the question
 }))
