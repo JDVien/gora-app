@@ -4,19 +4,16 @@ body {
   text-align: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 .grid-container {
   text-align: center;
   width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 40% 1fr 1fr 1fr;
-  grid-template-areas:
-    ". logo ."
-    "login . signup"
-    ". search ."
-    ". demo .";
+  height: 96%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .logo-container {
   grid-area: logo;
@@ -24,41 +21,52 @@ body {
   align-items: center;
   font-family: "Nosifer", cursive;
 }
-.user-login {
+/* .user-login {
   grid-area: login;
 }
 .user-signup {
   grid-area: signup;
 }
+*/
 .search-container {
-  grid-area: search;
+  padding: 70px;
 }
+/*
 .demo-login {
   grid-area: demo;
 }
 .continue {
   grid-area: continue;
-}
+} */
 .bttn-links {
   font-size: 40px;
   padding: 20px 40px;
-  background-color: rgb(105, 104, 104);
+  background-color: rgb(70, 70, 70);
 }
 .main-container {
+  background-color: black;
   position: absolute;
+  background-size: cover;
   margin-left: 0pt;
   z-index: -2;
 }
+.logo-container {
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 60px;
+}
 #background {
-  width: 100%;
-  height: 100%;
+  opacity: 35%;
+  width: 200%;
 }
 #gora-logo {
-  width: 30%;
-  height: 60%;
+  width: 35%;
+  height: 70%;
+  padding-left: 70px;
 }
 #logo-name {
-  font-size: 100px;
+  color: rgb(190, 30, 45);
+  font-size: 90px;
 }
 a {
   color: #00b7ff;
@@ -67,7 +75,6 @@ a {
 
 * {
   box-sizing: border-box;
-  background-color: #ffffff;
   font-family: "Nosifer", cursive;
 }
 
@@ -98,4 +105,54 @@ nav {
 h1 {
   font-size: 2rem;
   color: rgb(182, 15, 48);
+}
+
+#footer {
+  color: rgb(105, 104, 104);
+}
+
+#search-bar {
+  margin: 20px;
+}
+
+#user-login {
+  margin: 100px;
+}
+
+#user-signup {
+  margin: 20px;
+}
+
+#demo-login {
+  margin: 100px;
+}
+
+.background-image {
+  background: transparent;
+  position: absolute;
+  margin-left: 300px;
+  margin-bottom: 500px;
+  z-index: -1;
+  opacity: 30%;
+  transition: transform 0.3s;
+}
+
+.background-image:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.background-image-2 {
+  background: transparent;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 600px;
+  z-index: -1;
+  opacity: 30%;
+  transition: transform 0.3s;
+}
+
+.background-image-2:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
