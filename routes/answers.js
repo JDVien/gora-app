@@ -18,18 +18,32 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
     const answer = db.Answer.build({ content, userId: req.session.auth.userId, questionId });
     const validatorErrors = validationResult(req);
 
+    const questionToUpdate = await db.Question.findByPk(questionId, {
+        include: { model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }
+    });
+
     if (validatorErrors.isEmpty()) {
         await answer.save();
         res.redirect(`/questions/${questionId}`);
     } else {
-        // const errors = validatorErrors.array().map((error) => error.msg);
-        // res.render(`/questions/${questionId}`, {
-        //     title: 'Details',
-        //     answer,
-        //     errors,
-        //     csrfToken: req.csrfToken(),
-        // })
-        res.redirect(`/questions/${questionId}`)
+        const errors = validatorErrors.array().map((error) => error.msg);
+
+        let activeUser;
+        if (req.session.auth.userId){
+            activeUser = req.session.auth.userId;
+        } else {
+            activeUser = null;
+        }
+
+        res.render('question-detail', {
+            title: 'Details',
+            answer,
+            errors,
+            activeUser,
+            question: questionToUpdate,
+            csrfToken: req.csrfToken(),
+        })
+        // res.redirect(`/questions/${questionId}`)
     }
 }))
 
