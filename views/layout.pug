@@ -12,6 +12,9 @@ html
       ul
         li(class='top-nav')
           p(id="banner") #{topic} Banner
+        if (locals.authenticated)
+          li(class='top-nav')
+            a(href='/questions/new' id='ask-a-question') Ask a Question
         li(class='top-nav')
           div(class='search-container')
             form(action="/search-results")
