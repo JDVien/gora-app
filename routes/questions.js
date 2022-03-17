@@ -59,7 +59,7 @@ router.get('/new', csrfProtection, (req, res) => {
 });
 
 /* POST New Question  */
-router.post('/new', csrfProtection, questionValidators, asyncHandler(async (req, res) => {
+router.post('/new', csrfProtection, questionValidators, requireAuth, asyncHandler(async (req, res) => {
     const { title, content, imgLink } = req.body;
 
     const question = db.Question.build({ title, content, imgLink });
@@ -71,7 +71,7 @@ router.post('/new', csrfProtection, questionValidators, asyncHandler(async (req,
       res.redirect('/');
     } else {
       const errors = validatorErrors.array().map((error) => error.msg);
-      res.render('/new', {
+      res.render('create-question', {
         title: 'Ask a Question',
         question,
         errors,

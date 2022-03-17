@@ -1,0 +1,28 @@
+include utils.pug
+doctype html
+html
+  head
+      block head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        title Gora - #{title}
+        link(rel='stylesheet' href='/stylesheets/create.css')
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
+        script(src='/javascripts/questions.js' type='module')
+  body
+    div(class='create-bg-img')
+        h2
+        +validationErrorSummary(errors)
+        form(action='/questions/new' method='post' class='create-container')
+            div(class='create-form') Ask a Question
+                input(type='hidden' name='_csrf' value=csrfToken)
+                label(for='title') Title:
+                input(type='text' name='title' value=question.title)
+                label(for="content") Content:
+                input(type="text" name='content' value=question.content)
+                label(for='imgLink') Image Link:
+                input(type='text' name='imgLink' value=question.imgLink)
+                button(type='submit' class='create-submit-btn') Ask Question
+                a(href='/questions' id='create-cancel') Cancel
