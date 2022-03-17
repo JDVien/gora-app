@@ -22,9 +22,9 @@ html
         img(src='/images/bloody-letter-g.png' id='gora-logo' alt='Gora Logo' width='75px' style="background:transparent;")
         h1(id='logo-name') ORA
       div(class='search-container')
-        form(action="  ")
-          input(id="search-bar" class="bttn-links" type="search" placeholder="Search...")
-          button(type="submit" class="bttn-links") Image
+        form(action="/search-results")
+          input(id="search-bar" class="bttn-links" type="search" name="term" placeholder="Search...")
+          button(type="submit" class="bttn-links") Search
       div(class='user-login')
         a(id="user-login" class="bttn-links" href="/users/login") Log In
       div(class='user-signup')
