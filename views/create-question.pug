@@ -18,6 +18,10 @@ html
         form(action='/questions/new' method='post' class='create-container')
             div(class='create-form') Ask a Question
                 input(type='hidden' name='_csrf' value=csrfToken)
+                label(for='topicId') Topic:
+                select(name='topicId')
+                  each topic in topics
+                    option(value=topic.id)=topic.name
                 label(for='title') Title:
                 input(type='text' name='title' value=question.title)
                 label(for="content") Content:
