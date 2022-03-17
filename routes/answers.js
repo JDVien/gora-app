@@ -13,21 +13,24 @@ const answerValidators = [
 ]
 
 /* POST New Answer */
-router.post('/questions/:id(\\d+)', csrfProtection, answerValidators, requireAuth, asyncHandler(async(req, res) => {
-    const { content } = req.body;
-    const answer = db.Answer.build({ content, userId: req.session.auth.userId, questionId: req.session.auth.questionId });
+router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(async(req, res) => {
+    const { content, questionId } = req.body;
+    const answer = db.Answer.build({ content, userId: req.session.auth.userId, questionId });
     const validatorErrors = validationResult(req);
 
     if (validatorErrors.isEmpty()) {
         await answer.save();
-        res.redirect('/questions/???');
+        res.redirect(`/questions/${questionId}`);
     } else {
-        const errors = validatorErrors.array().map((error) => error.msg);
-        res.render('/questions/???', {
-            title: 'Details',
-            content,
-            errors,
-            csrfToken: req.csrfToken(),
-        })
+        // const errors = validatorErrors.array().map((error) => error.msg);
+        // res.render(`/questions/${questionId}`, {
+        //     title: 'Details',
+        //     answer,
+        //     errors,
+        //     csrfToken: req.csrfToken(),
+        // })
+        res.redirect(`/questions/${questionId}`)
     }
 }))
+
+module.exports = router;

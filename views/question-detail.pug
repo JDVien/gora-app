@@ -4,6 +4,7 @@ include utils.pug
 
 block content
     script(src='/javascripts/question-details.js' type='module')
+    script(src='/javascripts/answers.js' type='module')
     link(rel='stylesheet' href='/stylesheets/edit.css')
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
@@ -16,6 +17,13 @@ block content
         if activeUser === question.userId
             button(class='delete-button' id=`delete-question-${question.id}`) Delete
             button(class='edit-button' id=`edit-question-${question.id}`) Edit
+            button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
+            form(action=`/answers/new` method='post' class='hidden' id=`answer-form-${question.id}`)
+                input(type='hidden' name='_csrf' value=csrfToken)
+                input(type='hidden' name='questionId' value=question.id)
+                label(for="content") Content:
+                input(type="text" name='content' value='')
+                button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
             +validationErrorSummary(errors)
             form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
                 input(type='hidden' name='_csrf' value=csrfToken)
@@ -31,3 +39,7 @@ block content
             div(id=`answer-container`)
                 h3= answer.content
                 p= answer.User.username
+                if activeUser === answer.userId
+                    button(class='delete-button' id=`delete-answer`) Delete
+                    button(class='edit-button' id=`edit-answer`) Edit
+                    //- form(action=`/answers/${}`)
