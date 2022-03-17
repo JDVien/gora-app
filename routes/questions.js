@@ -45,7 +45,7 @@ router.get('/:id(\\d+)', requireAuth, asyncHandler(async (req, res) => {
     }
     console.log('----------------------> \n\n', req.session.auth.userId)
     console.log('----------------------> \n\n', question.userId)
-    res.render('question-detail', { question, title: 'Details', activeUser });
+    res.render('question-detail', { question, title: 'Details', activeUser});
 }));
 
 router.post('/edit/:id(\\d+)', csrfProtection, asyncHandler(async (req, res) => {
