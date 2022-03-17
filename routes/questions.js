@@ -69,14 +69,22 @@ router.post('/:id(\\d+)', questionValidators, requireAuth, csrfProtection, async
         res.redirect(`/questions/${questionId}`);
     } else {
         const errors = validatorErrors.array().map((error) => error.msg);
-        console.log(errors)
-        console.log(questionToUpdate.id)
-        res.render(`question-detail`, {
-            title: 'Detail',
-            question: {...question, id: questionId},
-            errors,
-            csrfToken: req.csrfToken()
-            })
+        question = { title: questionToUpdate.title, content: questionToUpdate.content, imgLink: questionToUpdate.imgLink}
+        console.log(question)
+        // res.render(`question-detail`, {
+        //     title: 'Detail',
+        //     // question: {...question, id: questionId},
+        //     question: {...questionToUpdate, id: questionId},
+        //     errors,
+        //     csrfToken: req.csrfToken()
+        //     })
+        let activeUser;
+        if (req.session.auth.userId){
+            activeUser = req.session.auth.userId;
+        } else {
+            activeUser = null;
+        }
+        res.render('question-detail', { question: {...question, userId: questionToUpdate.userId}, title: 'Details', activeUser, csrfToken: req.csrfToken(), errors});
     }
 }))
 

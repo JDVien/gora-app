@@ -4,11 +4,15 @@ include utils.pug
 
 block content
     script(src='/javascripts/question-details.js' type='module')
+    link(rel='stylesheet' href='/stylesheets/edit.css')
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
     div(id='detail-container')
         h1= question.title
             h3= question.content
             img(src=question.imgLink)
-    div
+    div(id="form-container")
         if activeUser === question.userId
             button(class='delete-button' id=`delete-question-${question.id}`) Delete
             button(class='edit-button' id=`edit-question-${question.id}`) Edit
