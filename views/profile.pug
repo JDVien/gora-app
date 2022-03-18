@@ -13,12 +13,12 @@ block content
       h2 My Profile
       h3 My Recent...
         h4(class='user-profile-content-container')
-          div(class='prof-filter')
-            button(type='button' id='profile-questions') Questions
-          div(class='prof-filter')
-            button(type='button' id='profile-answers') Answers
-          div(class='prof-filter')
-            button(type='button' id='profile-comments') Comments
+          div(class='prof-filter') Questions
+            button(type='button' id='profile-questions')
+          div(class='prof-filter') Answers
+            button(type='button' id='profile-answers')
+          div(class='prof-filter') Comments
+            button(type='button' id='profile-comments')
         div
           div(class='hidden profile-question-divs' id=`profile-question-container-${user.id}` style={'padding': '20px', 'dotted': '4px solid black'})
             for question in questions
@@ -39,7 +39,7 @@ block content
           div(class='hidden profile-comment-divs' id=`profile-comment-container-${user.id}`)
             for comment in comments
               div(class='comment-items')
-                a(href=`/questions/${comment.questionId}`)= comment.content
+                a(href=`/questions/${comment.answerId}`)= comment.content
                 p posted: #{comment.createdAt}
     else
       h1 Sign in to view profile
