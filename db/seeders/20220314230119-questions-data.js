@@ -216,6 +216,96 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     },
+    {
+      title: 'Would the BioShock series make a good film adaptation?',
+      content: "Since it will soon be adapted to the screen, I am curious what people think. I think it only works as a video game, personally, but I don't know why",
+      userId: '1',
+      topicId: '3',
+      imgLink: "https://ichef.bbci.co.uk/news/976/cpsprodpb/1172A/production/_110066417_e10afdf7-d6c5-413b-920b-1d3e16355649.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: "Is the Five Nights at Freddy's series appropriate for children?",
+      content: 'It looks like it could be on the surface, but I have no idea.',
+      userId: '2',
+      topicId: '3',
+      imgLink: "https://kevin.games/assets/images/tags/fnaf-games.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Is Resident Evil 7 the best horror VR experience?',
+      content: 'Tried it recently, and now I would like to try more!',
+      userId: '3',
+      topicId: '3',
+      imgLink: "https://o.aolcdn.com/hss/storage/midas/d484d3977f66f3b846d318a083b8b217/204868933/re72.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Anyone remember Manhunt from the early 2000s?',
+      content: 'That was one of the first horror games I played, and it is still one of the scariest.',
+      userId: '4',
+      topicId: '3',
+      imgLink: "https://upload.wikimedia.org/wikipedia/en/2/21/Manhuntbox.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Any horror games with strong storytelling like The Last of Us?',
+      content: 'I like a good scare, but would prefer to have more focus on character than most games in the genre.',
+      userId: '1',
+      topicId: '3',
+      imgLink: "https://images.pushsquare.com/06a0ca4a20dc9/last-of-us-remastered-cover.cover_large.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'What is the inspiration for Bloodborne and its setting?',
+      content: 'I love the Victorian gothic feel of the game. It is the perfect setting for a game like this.',
+      userId: '2',
+      topicId: '3',
+      imgLink: "https://4.bp.blogspot.com/-qr6YmRE32no/WKdZjiAKz3I/AAAAAAAAPh4/84vCfyXfLisKFFjQJ7b0sZ3I0tZQkbS2ACLcB/w1200-h630-p-k-no-nu/Title-Screen-BB.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'What are all the possible endings for Until Dawn?',
+      content: 'The choose-your-own-adventure style is great, but I am worried about missing out on the best possible endings.',
+      userId: '3',
+      topicId: '3',
+      imgLink: "https://miro.medium.com/max/640/0*oRQ-SFBJK-KJuZVO",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Is the first-person perspective the most effective for horror games?',
+      content: "I just played Outlast, and I think this proves that it is! It just isn't the same with third-person or other perspectives.",
+      userId: '4',
+      topicId: '3',
+      imgLink: "https://cdn.mos.cms.futurecdn.net/6d797e7d143daf3764b7ae5c7e3c148f-1200-80.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Which is the better sequel, Silent Hill 2 or The Last of Us 2?',
+      content: 'I think both are great, but Silent Hill 2 gets my vote',
+      userId: '5',
+      topicId: '3',
+      imgLink: "https://bloody-disgusting.com/wp-content/uploads/2018/12/silenthill2.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'I think Inside is one of the best horror-themed games of all time, anyone agree?',
+      content: "It's not the scariest game I have played, but it one of the most effective works of art in the genre.",
+      userId: '5',
+      topicId: '3',
+      imgLink: "https://cdn.akamai.steamstatic.com/steam/apps/304430/capsule_616x353.jpg?t=1605518780",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }
   ], {});
   },
 
