@@ -125,7 +125,97 @@ module.exports = {
       imgLink: "https://upload.wikimedia.org/wikipedia/en/7/71/Movie_poster_cabin_fever.jpg",
       createdAt: new Date(),
       updatedAt: new Date()
-    }
+    },
+    {
+      title: 'Who is the true villain in Frankenstein by Mary Shelley?',
+      content: 'Is it the so-called monster made by Dr. Frankenstein or the villagers who seemd devoid of humanity?',
+      userId: '3',
+      topicId: '2',
+      imgLink: "https://images-na.ssl-images-amazon.com/images/I/41CC3AXG7nL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: "What is Stephen King's best horror novel?",
+      content: 'He made so many classics that it is almost impossible to choose the best. I think It might be his best work, though.',
+      userId: '4',
+      topicId: '2',
+      imgLink: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/stephenking-index-1596489768.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Who is scarier in The Silence of the Lambs, Hannibal Lecter or Buffalo Bill?',
+      content: 'They are both frightening in such different ways, it is hard to decide...',
+      userId: '1',
+      topicId: '2',
+      imgLink: "https://cdn2.penguin.com.au/covers/400/9780099532927.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'What horror book had the greatest impact on popular culture?',
+      content: 'I would say it has to be Dracula by Bram Stoker.',
+      userId: '2',
+      topicId: '2',
+      imgLink: "https://m.media-amazon.com/images/I/51M0okPhZoL.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Why are vampires and romance linked so often?',
+      content: "Aside from Twilight, did it start with Anne Rice's Interview with the Vampire?",
+      userId: '3',
+      topicId: '2',
+      imgLink: "https://images-na.ssl-images-amazon.com/images/I/91IVrORczaL.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Why did H.P. Lovecraft only write such short pieces of fiction?',
+      content: 'At the Mountains of Madness is one of my favorites, but I wish it was longer!',
+      userId: '4',
+      topicId: '2',
+      imgLink: "https://149349728.v2.pressablecdn.com/wp-content/uploads/2011/02/0*yZDWa9qzijGQNqhI.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Why is the novel World War Z so much better than its film adaptation?',
+      content: 'I think the interview style of the book really gives it most of its appeal.',
+      userId: '1',
+      topicId: '2',
+      imgLink: "https://cdn.pastemagazine.com/www/articles/2018/08/08/world-war-z.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Is Joe Hill as good of a writer as his father?',
+      content: 'I just found out his dad is Stephen King! Who knew?!',
+      userId: '2',
+      topicId: '2',
+      imgLink: "https://images-na.ssl-images-amazon.com/images/I/714rjAuY8DL.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Why is the The Walking Dead the most famous horror comic?',
+      content: 'I think it is overrated because of the popularity of the show.',
+      userId: '3',
+      topicId: '2',
+      imgLink: "https://images-na.ssl-images-amazon.com/images/I/612bK1krzxL._SX319_BO1,204,203,200_.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'What horror comics make great use of its setting like 30 Days of Night?',
+      content: 'I just read it, and I am looking for similar recommendations!',
+      userId: '4',
+      topicId: '2',
+      imgLink: "https://m.media-amazon.com/images/I/41IbBohDH1L.jpg",
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
   ], {});
   },
 
