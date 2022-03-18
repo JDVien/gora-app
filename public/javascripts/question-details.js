@@ -14,7 +14,7 @@ const deleteBtn = document.querySelector(".delete-button");
 
 deleteBtn.addEventListener('click', (e) => {
     const questionId = e.target.id.split('-')[2];
-    const form = document.getElementById(`edit-form-${questionId}`)
+    const form = document.getElementById(`delete-question-${questionId}`)
     if (form.classList.contains('hidden')) {
         form.classList.remove('hidden')
     } else {

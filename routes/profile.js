@@ -10,15 +10,13 @@ const { requireAuth } = require('../auth');
 const router = express.Router();
 
 
-// GET profile
+// GET profile with user questions, answers, comments
 router.get('/:id(\\d+)/', requireAuth, asyncHandler(async(req, res) => {
   const userId = parseInt(req.params.id, 10)
-  let questions;
-  // questions = await db.Question.findAll({
-  //   include: { model: db.User, include: { model: db.Answer, include: { model: db.Comment }} }
-  // })
-  questions = await db.Question.findAll({where: {userId}})
- console.log(questions);
+  let questions = await db.Question.findAll({where: {userId}, include: { model: db.Answer }})
+  let answers = await db.Answer.findAll({where: {userId}, include: {model: db.Question}})
+  let comments = await db.Comment.findAll({where: {userId}})
+  console.log(questions);
   let activeUser;
     if (req.session.auth.userId){
         activeUser = req.session.auth.userId;
@@ -29,10 +27,16 @@ router.get('/:id(\\d+)/', requireAuth, asyncHandler(async(req, res) => {
   res.render('profile', {
       profileTitle: "My Questions",
       questions,
+      answers,
+      comments,
       user,
       activeUser
   });
 }));
+
+
+
+
 
 
 module.exports = router;
