@@ -24,19 +24,18 @@ img {
 
 .profile-question-divs {
   border: 2px solid rgb(70, 70, 70);
-  background-color:  rgb(129, 127, 127);
+  background-color: rgb(129, 127, 127);
   text-align: center;
 }
 
 .profile-answer-divs {
   padding: 10px;
   border: 2px solid rgb(70, 70, 70);
-  background-color:  rgb(129, 127, 127);
-
+  background-color: rgb(129, 127, 127);
 }
 
 .question-items {
-  padding: 25px ;
+  padding: 25px;
   border: 2px solid rgb(70, 70, 70);
 }
 
@@ -45,12 +44,16 @@ img {
 }
 
 .answer-items {
-  padding: 25px ;
+  padding: 25px;
   border: 2px solid rgb(70, 70, 70);
 }
 
 .profile-comment-divs {
   border: 2px solid rgb(70, 70, 70);
-  background-color:  rgb(129, 127, 127);
+  background-color: rgb(129, 127, 127);
+}
 
+.main-container {
+  margin-top: 50px;
+  margin-left: 100px;
 }
