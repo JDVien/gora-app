@@ -28,14 +28,14 @@ router.get('/', asyncHandler(async (req, res) => {
     const allQuestions = await db.Question.findAll({
         include: { model: db.Answer }
     })
-    console.log(allQuestions[0].Answers)
+    // console.log(allQuestions[0].Answers)
     res.render('questions.pug', { title: 'Questions', allQuestions})
 }));
 
 router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, res) => {
     const questionId = parseInt(req.params.id, 10);
     const question = await db.Question.findByPk(questionId, {
-        include: { model: db.Answer, include: { model: db.Comment, include: {model: db.User}} }
+        include: [{ model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }, { model: db.User}]
     });
     let activeUser;
     if (req.session.auth.userId){
@@ -43,8 +43,7 @@ router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, re
     } else {
         activeUser = null;
     }
-    // console.log('----------------------> \n\n', req.session.auth.userId)
-    // console.log('----------------------> \n\n', question.userId)
+
     res.render('question-detail', { question, title: 'Details', activeUser, csrfToken: req.csrfToken()});
 }));
 
@@ -81,10 +80,13 @@ router.post('/new', csrfProtection, questionValidators, requireAuth, asyncHandle
     }
 }));
 
+/* EDIT Question */
 router.post('/:id(\\d+)', questionValidators, requireAuth, csrfProtection, asyncHandler(async (req, res) => {
     // TODO editing the question
     const questionId = parseInt(req.params.id, 10);
-    const questionToUpdate = await db.Question.findByPk(questionId);
+    const questionToUpdate = await db.Question.findByPk(questionId, {
+        include: { model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }
+    });
 
     const {
         title,
@@ -102,22 +104,15 @@ router.post('/:id(\\d+)', questionValidators, requireAuth, csrfProtection, async
         res.redirect(`/questions/${questionId}`);
     } else {
         const errors = validatorErrors.array().map((error) => error.msg);
-        question = { title: questionToUpdate.title, content: questionToUpdate.content, imgLink: questionToUpdate.imgLink}
-        console.log(question)
-        // res.render(`question-detail`, {
-        //     title: 'Detail',
-        //     // question: {...question, id: questionId},
-        //     question: {...questionToUpdate, id: questionId},
-        //     errors,
-        //     csrfToken: req.csrfToken()
-        //     })
+        question = questionToUpdate;
+
         let activeUser;
         if (req.session.auth.userId){
             activeUser = req.session.auth.userId;
         } else {
             activeUser = null;
         }
-        res.render('question-detail', { question: {...question, userId: questionToUpdate.userId}, title: 'Details', activeUser, csrfToken: req.csrfToken(), errors});
+        res.render('question-detail', { question, title: 'Details', activeUser, csrfToken: req.csrfToken(), errors});
     }
 }));
 

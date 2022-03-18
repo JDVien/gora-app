@@ -12,6 +12,8 @@ const usersRouter = require('./routes/users');
 const questionsRouter = require('./routes/questions');
 const topicsRouter = require('./routes/topics');
 const searchRouter = require('./routes/search-questions');
+const answersRouter = require('./routes/answers');
+
 const profileRouter = require('./routes/profile');
 const { restoreUser } = require('./auth.js');
 
@@ -45,10 +47,12 @@ store.sync();
 app.use(restoreUser);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/questions', questionsRouter)
-app.use('/topics', topicsRouter)
-app.use('/search-results', searchRouter)
-app.use('/profile', profileRouter)
+app.use('/questions', questionsRouter);
+app.use('/topics', topicsRouter);
+app.use('/search-results', searchRouter);
+app.use('/answers', answersRouter);
+app.use('/profile', profileRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
