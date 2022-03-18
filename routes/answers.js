@@ -63,4 +63,11 @@ router.patch('/:id(\\d+)', async(req, res) => {
     }
 })
 
+router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async (req, res) => {
+    const answerId = parseInt(req.params.id, 10);
+    const answer = await db.Answer.findByPk(answerId);
+    await answer.destroy();
+    res.redirect('/questions');
+}))
+
 module.exports = router;
