@@ -9,36 +9,39 @@ block content
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
+    if activeUser === question.userId
+        div(id='button-container')
+            div(id='delete-question-btn')
+                a(href=`/questions/delete/${question.id}` onclick="return confirm('Are you sure you want to delete this item?');" class='delete-button' id=`delete-question-${question.id}`) Delete
+            div(id='edit-question-btn')
+                button(class='edit-button' id=`edit-question-${question.id}`) Edit
+                +validationErrorSummary(errors)
+                form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
+                    input(type='hidden' name='_csrf' value=csrfToken)
+                    label(for='title') Title:
+                    input(type='text' name='title' value=question.title)
+                    label(for="content") Content:
+                    input(type="text" name='content' value=question.content)
+                    label(for='imgLink') Image Link:
+                    input(type='text' name='imgLink' value=question.imgLink)
+                    button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
     div(id='detail-container')
-        h1= question.title
+        div(id='username-div')
+            p= question.User.username
+        div(id='question-content-div')
+            h1= question.title
             h3= question.content
             img(src=question.imgLink)
     div(id="form-container")
-        if activeUser === question.userId
-            div(id='button-container')
-                div(id='delete-question-btn')
-                    a(href=`/questions/delete/${question.id}` onclick="return confirm('Are you sure you want to delete this item?');" class='edit-button' id=`edit-question-${question.id}`) Delete
-                div(id='edit-question-btn')
-                    button(class='edit-button' id=`edit-question-${question.id}`) Edit
-                    +validationErrorSummary(errors)
-                    form(action=`/questions/${question.id}` method='post' class='hidden' id=`edit-form-${question.id}`)
-                        input(type='hidden' name='_csrf' value=csrfToken)
-                        label(for='title') Title:
-                        input(type='text' name='title' value=question.title)
-                        label(for="content") Content:
-                        input(type="text" name='content' value=question.content)
-                        label(for='imgLink') Image Link:
-                        input(type='text' name='imgLink' value=question.imgLink)
-                        button(class='edit-submit-btn' id=`edit-btn-${question.id}`) Submit Edit
-                div(id='answer-question-btn')
-                    button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
-                    +validationErrorSummary(answerErrors)
-                    form(action=`/answers/new` method='post' class='hidden' id=`answer-form-${question.id}`)
-                        input(type='hidden' name='_csrf' value=csrfToken)
-                        input(type='hidden' name='questionId' value=question.id)
-                        label(for="content") Content:
-                        input(type="text" name='content' value='')
-                        button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
+        div(id='answer-question-btn')
+            button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
+            +validationErrorSummary(answerErrors)
+            form(action=`/answers/new` method='post' class='hidden' id=`answer-form-${question.id}`)
+                input(type='hidden' name='_csrf' value=csrfToken)
+                input(type='hidden' name='questionId' value=question.id)
+                label(for="content") Content:
+                input(type="text" name='content' value='')
+                button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
     if question.Answers.length > 0
         for answer in question.Answers
             div(id=`answer-container`)

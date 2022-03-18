@@ -28,14 +28,14 @@ router.get('/', asyncHandler(async (req, res) => {
     const allQuestions = await db.Question.findAll({
         include: { model: db.Answer }
     })
-    console.log(allQuestions[0].Answers)
+    // console.log(allQuestions[0].Answers)
     res.render('questions.pug', { title: 'Questions', allQuestions})
 }));
 
 router.get('/:id(\\d+)',requireAuth, csrfProtection, asyncHandler(async (req, res) => {
     const questionId = parseInt(req.params.id, 10);
     const question = await db.Question.findByPk(questionId, {
-        include: { model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }
+        include: [{ model: db.Answer, include: [{ model: db.Comment, include: {model: db.User}}, {model: db.User}] }, { model: db.User}]
     });
     let activeUser;
     if (req.session.auth.userId){
