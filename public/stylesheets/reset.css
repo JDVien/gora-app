@@ -33,7 +33,7 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -55,7 +55,7 @@ nav {
   padding: 0;
   outline: 0;
   font-weight: normal;
-}
+} */
 
 h1 {
   font-size: 2rem;
@@ -113,6 +113,9 @@ li {
 
 .top-items {
   justify-self: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
 
@@ -133,7 +136,7 @@ li {
 }
 
 a {
-  color: #010047;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -145,4 +148,9 @@ a {
 .horizontal-nav a:hover {
   background-color: #f70e06;
   color: #fff;
+}
+
+.question-divs {
+  margin-top: 50px;
+  margin-left: 100px;
 }
