@@ -1,75 +1,82 @@
-.edit-button, .create-answer, .delete-button {
-    display:inline-block;
-    padding:0.46em 1.6em;
-    border:0.1em none #000000;
-    margin:0 0.2em 0.2em 0;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#000000;
-    text-shadow: 0 0.04em 0.04emrgba(0,0,0,0.35);
-    background-color:#b11414;
-    text-align:center;
-    transition: all 0.15s;
-    font-size: x-large;
-    /* font-family: "Nosifer", cursive; */
-    border-radius: 5px;
+.edit-button,
+.create-answer,
+.delete-button {
+  display: inline-block;
+  padding: 0.46em 1.6em;
+  border: 0.1em none #000000;
+  margin: 0 0.2em 0.2em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04emrgba (0, 0, 0, 0.35);
+  background-color: #b11414;
+  text-align: center;
+  transition: all 0.15s;
+  font-size: x-large;
+  /* font-family: "Nosifer", cursive; */
+  border-radius: 5px;
 }
 
 #detail-container {
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    align-items: center;
-    border: 2px solid black ;
-    margin: 10px;
-    padding: 20px;
-    background-color: #332f2f;
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 20px;
+  background-color: #332f2f;
+  border-radius: 10px;
 }
 
 #username-div {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 #question-content-div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 img {
-    margin: auto;
-    border-radius: 5px;
+  margin: auto;
+  border-radius: 5px;
 }
 
 #form-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 body {
-    /* font-family: "Nosifer", cursive; */
-    /* background-color: rgb(54, 7, 7); */
-    background-color: rgb(105, 104, 104);
-
+  /* font-family: "Nosifer", cursive;
+  background-color: rgb(54, 7, 7); */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(105, 104, 104);
 }
 
 #answer-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: #332f2f;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #332f2f;
+  border-radius: 5px;
 }
 
 #button-container {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.main-container {
+  margin-top: 50px;
+  margin-left: 100px;
 }

@@ -7,6 +7,7 @@ block content
   script(src='/javascripts/profile-bttns.js' type='module' defer)
   link(rel='stylesheet' href='/stylesheets/profile.css')
   body
+  div(class='main-container')
     if (locals.authenticated)
       h1 Welcome, #{user.firstName}!
       h2 My Profile
