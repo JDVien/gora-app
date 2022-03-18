@@ -5,13 +5,36 @@ a {
 img {
   padding: 50px;
 }
+.user-profile-content-container {
+
+  background-color:  rgb(129, 127, 127);
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+#profile-questions {
+ width: 150%;
+ height: 150%;
+ opacity: 0;
+}
+#profile-answers {
+ width: 150%;
+ height: 150%;
+ opacity: 0;
+}
+#profile-comments {
+ width: 150%;
+ height: 150%;
+ opacity: 0;
+}
+
 .prof-filter {
-  padding: 25px;
-  width: 20%;
+  padding: 5px;
+  width: 30%;
   display: inline-flex;
   justify-content: center;
   border: 2px solid black;
-  border-radius: 10px;
   font-family: "Nosifer", cursive;
   font-size: 15px;
   background-color: rgb(70, 70, 70);
@@ -19,7 +42,11 @@ img {
 }
 
 .prof-filter:hover {
-  background-color: crimson;
+
+  border: 3px solid black;
+  padding: 2px;
+  box-shadow: inset 0em -1em rgb(122, 12, 34);
+  opacity: 75%;
 }
 
 .profile-question-divs {
@@ -52,5 +79,4 @@ img {
 .profile-comment-divs {
   border: 2px solid rgb(70, 70, 70);
   background-color:  rgb(129, 127, 127);
-
 }
