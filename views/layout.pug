@@ -10,15 +10,15 @@ html
   body
     div(class='horizontal-nav')
       div(class='top-items')
-        p(id="banner") #{topic} Banner
+        //- p(id="banner") #{topic} Banner
       div(class='top-items')
         if (locals.authenticated)
           a(href='/questions/new' id='ask-a-question') Ask a Question
       div(class='top-items')
         div(class='search-container')
           form(action="/search-results")
-          input(id="search-bar" type="search" name="term" placeholder="Search..." required)
-          button(type="submit") Search Questions
+            input(id="search-bar" type="search" name="term" placeholder="Search..." required)
+            input(type="image" name="submit" class="mini-search-icon" src="/images/search-icon.ico" style='background:transparent;')
       div(class='top-items')
         if !(locals.authenticated)
           a(id="demo-login" href="/users/login/demo") Demo
@@ -31,7 +31,8 @@ html
     div(class='vertical-nav')
       ul
         li(class='nav-item')
-          a(id="logo" href="/") Logo
+          button(onclick= "window.location.href='/';")
+            img(src='/images/search-icon.ico' style='background:transparent; width:35%; height:35%')
         li(class='nav-item')
           a(id="all" href="/questions") All
         li(class='nav-item')

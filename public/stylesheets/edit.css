@@ -55,6 +55,7 @@ img {
 body {
   /* font-family: "Nosifer", cursive;
   background-color: rgb(54, 7, 7); */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(105, 104, 104);
 }
 

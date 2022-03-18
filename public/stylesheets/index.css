@@ -28,11 +28,6 @@ body {
   grid-area: signup;
 }
 */
-.search-container {
-  margin-left: 350px;
-  margin-right: 350px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 /*
 .demo-login {
   grid-area: demo;
@@ -44,7 +39,6 @@ body {
   font-size: 40px;
   padding: 20px 40px;
   background-color: rgb(70, 70, 70);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .main-container {
   background-color: black;
@@ -64,8 +58,8 @@ body {
   width: 200%;
 }
 #gora-logo {
-  width: 30%;
-  height: 65%;
+  width: 180px;
+  height: 180px;
 }
 #logo-name {
   margin-left: 0px;
@@ -80,6 +74,21 @@ a {
 * {
   box-sizing: border-box;
   font-family: "Nosifer", cursive;
+}
+
+.search-container {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.search-icon {
+  height: 40px;
+  width: 40px;
+  opacity: 40%;
+}
+
+.search-icon:hover {
+  opacity: 75%;
 }
 
 h1,
@@ -126,13 +135,28 @@ h1 {
 }
 
 #user-signup {
-  margin: 20px;
+  margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #demo-login {
   margin: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#user-login:hover {
+  opacity: 110%;
+  color: rgb(207, 17, 36);
+}
+
+#user-signup:hover {
+  opacity: 110%;
+  color: rgb(207, 17, 36);
+}
+
+#demo-login:hover {
+  opacity: 110%;
+  color: rgb(207, 17, 36);
 }
 
 .background-image {

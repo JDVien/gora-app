@@ -1,6 +1,12 @@
 body {
   padding: 50px;
+  background-color: rgb(8, 8, 8);
+  color: white;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#topic {
+  margin-left: 70px;
 }
 
 /*
@@ -78,7 +84,7 @@ h1 {
 
 /* Change the link color on hover */
 .vertical-nav li a:hover {
-  background-color: #f70e06;
+  background-color: rgb(8, 8, 8);
   color: #fff;
 }
 .icon {
@@ -128,6 +134,7 @@ li {
 }
 
 #user-logout {
+  color: rgb(70, 70, 70);
   padding: 10px;
 }
 
@@ -142,15 +149,29 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: "Nosifer", cursive;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .horizontal-nav a:hover {
-  background-color: #f70e06;
+  background-color: rgb(8, 8, 8);
   color: #fff;
 }
 
 .question-divs {
   margin-top: 50px;
   margin-left: 100px;
+}
+
+.question-divs a {
+  color: rgb(223, 223, 223);
+}
+
+.mini-search-icon {
+  height: 6%;
+  width: 6%;
+  opacity: 60%;
+}
+
+.mini-search-icon:hover {
+  opacity: 150%;
 }
