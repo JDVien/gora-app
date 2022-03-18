@@ -2,12 +2,12 @@ extends layout.pug
 
 block content
     script(src='/javascripts/questions.js' type='module')
-    div
-        for question in allQuestions
-            div(class='question-divs' id=`question-container-${question.id}`)
-                a= question.title
-                a= question.content
-                img(src=question.imgLink)
-                //- if(question.Answers)
-                for answer in question.Answers
-                    a= answer.content
+    script(src='/javascripts/questions-carousel.js' type='module')
+    link(rel='stylesheet' href='/stylesheets/questions.css')
+    div(class='carousel')
+        div(class='carousel-item')
+
+
+
+    //- div(class='questions-divs' style={'margin-top': '50px', 'margin-left': '80px'})
+    //- button(type='button' class='get-question') Next Question
