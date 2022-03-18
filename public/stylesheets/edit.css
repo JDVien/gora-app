@@ -1,4 +1,4 @@
-.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer-btn {
+.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer, .delete-question {
     display:inline-block;
     padding:0.46em 1.6em;
     border:0.1em none #000000;

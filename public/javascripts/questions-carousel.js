@@ -18,7 +18,6 @@ nextQuestionBttn.onclick = function() {
           <a href=/questions/${questionData[i].id}> <img src=${questionData[i].imgLink}></a>
         </div>
       </div>
-
     `
     i++;
   }
