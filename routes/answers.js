@@ -45,6 +45,22 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
         })
         // res.redirect(`/questions/${questionId}`)
     }
-}))
+}));
+
+router.patch('/:id(\\d+)', async(req, res) => {
+    const answer = await db.Answer.findByPk(req.params.id)
+
+    if (!(req.body.content.length > 1)) {
+        res.json({message: "Please provide a valid update"})
+    }
+
+    if (answer) {
+        answer.content = req.body.content
+        await answer.save()
+        res.json({message: "Success", answer})
+    } else {
+        res.json({message: "Could not find post please try again"})
+    }
+})
 
 module.exports = router;

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer-btn {
+    display:inline-block;
+    padding:0.46em 1.6em;
+    border:0.1em none #000000;
+    margin:0 0.2em 0.2em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04emrgba(0,0,0,0.35);
+    background-color:#b11414;
+    text-align:center;
+    transition: all 0.15s;
+    font-size: x-large;
+    /* font-family: "Nosifer", cursive; */
+    border-radius: 5px;
+=======
 .edit-button,
 .create-answer,
 .delete-button {
@@ -17,6 +36,7 @@
   font-size: x-large;
   /* font-family: "Nosifer", cursive; */
   border-radius: 5px;
+>>>>>>> main
 }
 
 #detail-container {
@@ -59,6 +79,16 @@ body {
   background-color: rgb(105, 104, 104);
 }
 
+<<<<<<< HEAD
+.answer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #332f2f;
+    border-radius: 5px;
+=======
 #answer-container {
   display: flex;
   justify-content: space-between;
@@ -67,6 +97,7 @@ body {
   padding: 10px;
   background-color: #332f2f;
   border-radius: 5px;
+>>>>>>> main
 }
 
 #button-container {
