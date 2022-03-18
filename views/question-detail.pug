@@ -44,10 +44,14 @@ block content
                 button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
     if question.Answers.length > 0
         for answer in question.Answers
-            div(id=`answer-container`)
+            div(class=`answer-container` id=`answer-container-${answer.id}`)
                 h3= answer.content
                 p= answer.User.username
+                p(id=`answer-content-${answer.id}`)= answer.content
                 if activeUser === answer.userId
-                    button(class='delete-button' id=`delete-answer`) Delete
-                    button(class='edit-button' id=`edit-answer`) Edit
-                    //- form(action=`/answers/${}`)
+                    button(class='delete-answer-btn' id=`delete-answer-${answer.id}`) Delete
+                    button(class='edit-answer-btn' id=`edit-answer-btn-${answer.id}`) Edit
+                    form(class='hidden' id=`edit-answer-form-${answer.id}`) 
+                        label(for="content") Content:
+                        input(type="text" name='content' value=answer.content id=`content-field-${answer.id}`)
+                        button(class='edit-submit-btn' id=`submit-answer-btn-${answer.id}`) Submit Edit
