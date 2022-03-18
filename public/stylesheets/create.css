@@ -39,23 +39,29 @@ background-color: rgb(105, 104, 104);
 opacity: 80%;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+textarea:focus, input[type=text]:focus {
 background-color: #ddd;
 outline: none;
 }
 
 /* Submit button styling */
-.create-submit-button {
+.create-submit-btn {
 background-color: rgb(107, 10, 29);
 font-family: 'Nosifer', cursive;
 color: white;
-padding: 16px 20px;
+padding: 10px 15px;
 border: none;
 cursor: pointer;
 width: 100%;
 opacity: 0.9;
+margin-top: 15px;
+margin-bottom: 15px;
 }
 
 .create-submit-button:hover {
 opacity: 3;
+}
+
+.select-selected {
+    background-color: rgb(107, 10, 29);
 }

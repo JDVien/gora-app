@@ -19,9 +19,10 @@ html
             div(class='create-form') Ask a Question
                 input(type='hidden' name='_csrf' value=csrfToken)
                 label(for='topicId') Topic:
-                select(name='topicId')
-                  each topic in topics
-                    option(value=topic.id)=topic.name
+                div(class="custom-select")
+                  select(name='topicId')
+                    each topic in topics
+                      option(value=topic.id)=topic.name
                 label(for='title') Title:
                 textarea(name='title' value=question.title)
                 label(for="content") Content:
