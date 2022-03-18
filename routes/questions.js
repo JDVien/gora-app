@@ -123,4 +123,12 @@ router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async 
     res.redirect('/questions');
 }))
 
+router.get('/all', async(req, res) => {
+    console.log('in terminal -------------------------->')
+    const allQuestions = await db.Question.findAll({
+        order: [[ 'createdAt', 'DESC' ]]
+    })
+    return res.json(allQuestions)
+})
+
 module.exports = router;
