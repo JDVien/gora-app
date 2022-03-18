@@ -3,18 +3,43 @@ extends layout.pug
 include utils.pug
 
 block content
+  script(src='/javascripts/questions.js' type='module' defer)
+  script(src='/javascripts/profile-bttns.js' type='module' defer)
+  link(rel='stylesheet' href='/stylesheets/profile.css')
   body
     if (locals.authenticated)
       h1 Welcome, #{user.firstName}!
       h2 My Profile
-      h3 Recent Questions
+      h3 My Recent...
+        h4(class='user-profile-content-container')
+          div(class='prof-filter')
+            button(type='button' id='profile-questions') Questions
+          div(class='prof-filter')
+            button(type='button' id='profile-answers') Answers
+          div(class='prof-filter')
+            button(type='button' id='profile-comments') Comments
         div
-          for question in questions
-            div(class='profile-question-divs' id=`profile-question-container-${user.id}` style={'padding': '20px', 'dotted': '4px solid black'})
-              a= question.title
-              a= question.content
-              img(src=question.imgLink)
+          div(class='hidden profile-question-divs' id=`profile-question-container-${user.id}` style={'padding': '20px', 'dotted': '4px solid black'})
+            for question in questions
+              div(class='question-items')
+                div(class='question-title')
+                  a( href=`/questions/${question.id}`)= question.title
+                  p posted: #{question.createdAt}
+                div(class='question-content')
+                  a= question.content
+                  img(src=question.imgLink)
+        div
+          div(class='hidden profile-answer-divs' id=`profile-answer-container-${user.id}`)
+            for answer in answers
+              div(class='answer-items')
+                a(href=`/questions/${answer.questionId}`)= answer.content
+                p posted: #{answer.createdAt}
+        div
+          div(class='hidden profile-comment-divs' id=`profile-comment-container-${user.id}`)
+            for comment in comments
+              div(class='comment-items')
+                a(href=`/questions/${comment.questionId}`)= comment.content
+                p posted: #{comment.createdAt}
     else
       h1 Sign in to view profile
         a(id="user-login" href="/users/login") Log In
-
