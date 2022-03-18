@@ -43,7 +43,16 @@ module.exports = {
     hashedPassword: '$2a$10$zNhE/0zccjCJIbIahYF7AeLl0O.yIVKxHlwaMDpyjpdC6jdZ2C5Aa',
     createdAt: new Date(),
     updatedAt: new Date()
-    }
+  },
+  {
+    firstName: 'Demo',
+    lastName: 'Bot',
+    email: 'example@example.example',
+    username: 'demo-user',
+    hashedPassword: '$2a$10$wgU73qNEPAxDkiULOxwBIujTc7cJh./hNG6jMFgP7jv7nENdhnkJ2',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }
   ], {});
   },
 
