@@ -31,16 +31,22 @@ html
     div(class='vertical-nav')
       ul
         li(class='nav-item')
-          button(onclick= "window.location.href='/';" style='background:transparent;')
+          button(id="home-button" onclick= "window.location.href='/';" style='background:transparent;')
             img(src='/images/bloody-letter-g.png' style='background:transparent; width:35%; height:35%')
         li(class='nav-item')
-          a(id="all" href="/questions") All
+          a(id="all" class="topics" href="/questions") All
+            img(src='https://cdn-icons-png.flaticon.com/512/1047/1047494.png' style='background:transparent; width:70%; height:70%')
         li(class='nav-item')
-          a(id="cinema" href="/topics/1/questions") Cinema
+          a(id="cinema" class="topics" href="/topics/1/questions") Cinema
+            img(src='https://cdn-icons-png.flaticon.com/512/683/683103.png' style='background:transparent; width:70%; height:70%')
         li(class='nav-item')
-          a(id="literature" href="/topics/2/questions") Literature
+          a(id="literature" class="topics" href="/topics/2/questions") Literature
+            img(src='https://cdn-icons-png.flaticon.com/512/2178/2178213.png' style='background:transparent; width:70%; height:70%')
         li(class='nav-item')
-          a(id="gaming" href="/topics/3/questions") Gaming
-
+          a(id="gaming" class="topics" href="/topics/3/questions") Gaming
+            img(src='https://cdn-icons-png.flaticon.com/512/5532/5532803.png' style='background:transparent; width:70%; height:70%')
 
     block content
+
+  footer
+    p(id='footer') By Suwanshree Acharya, Damian Rojas, Nathan Zavala and Jason Vien
