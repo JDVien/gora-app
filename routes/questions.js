@@ -126,7 +126,7 @@ router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async 
 }))
 
 router.get('/all', async(req, res) => {
-    console.log('in terminal -------------------------->')
+    // console.log('in terminal -------------------------->')
     const allQuestions = await db.Question.findAll({
         order: [[ 'createdAt', 'DESC' ]]
     })
