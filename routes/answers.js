@@ -48,12 +48,14 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
 }));
 
 router.patch('/:id(\\d+)', async(req, res) => {
-    const answer = await db.Answer.findByPk(req.params.id)
+    const answer = await db.Answer.findByPk(req.params.id, {
+        include: db.User
+    })
 
     if (!(req.body.content.length > 1)) {
         res.json({message: "Please provide a valid update"})
     }
-
+    console.log(answer.User.username)
     if (answer) {
         answer.content = req.body.content
         await answer.save()
@@ -62,5 +64,12 @@ router.patch('/:id(\\d+)', async(req, res) => {
         res.json({message: "Could not find post please try again"})
     }
 })
+
+router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async (req, res) => {
+    const answerId = parseInt(req.params.id, 10);
+    const answer = await db.Answer.findByPk(answerId);
+    await answer.destroy();
+    res.redirect(`/questions/${answer.questionId}`);
+}))
 
 module.exports = router;
