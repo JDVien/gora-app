@@ -1,67 +1,79 @@
 body, html {
-height: 100%;
-background-color: black;
+    height: 100%;
+    background-color: black;
 }
 
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Form styling */
 .create-form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
 /* Background img styling */
 .create-bg-img{
-background-image: url(../images/ghostface1.jpg);
+    background-image: url(../images/ghostface3.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-min-height: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .create-container {
-position: absolute;
-font-family: 'Nosifer', cursive;
-
-color: rgb(43, 18, 23);
-right: 0;
-margin: 20px;
-max-width: 300px;
-padding: 16px;
-background-color: rgb(105, 104, 104);
-opacity: 80%;
+    font-family: 'Nosifer', cursive;
+    color: rgb(43, 18, 23);
+    right: 0;
+    margin: 20px;
+    width: 350px;
+    padding: 16px;
+    background-color: rgb(105, 104, 104);
+    opacity: 80%;
+    border-radius: 10px;
 }
 
 textarea:focus, input[type=text]:focus {
-background-color: #ddd;
-outline: none;
+    background-color: #ddd;
+    outline: none;
 }
 
 /* Submit button styling */
 .create-submit-btn {
-background-color: rgb(107, 10, 29);
-font-family: 'Nosifer', cursive;
-color: white;
-padding: 10px 15px;
-border: none;
-cursor: pointer;
-width: 100%;
-opacity: 0.9;
-margin-top: 15px;
-margin-bottom: 15px;
+    background-color: rgb(107, 10, 29);
+    font-family: 'Nosifer', cursive;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .create-submit-button:hover {
-opacity: 3;
+    opacity: 3;
 }
 
-.select-selected {
-    background-color: rgb(107, 10, 29);
+.text-boxes {
+    width: 80%;
+}
+#content-area {
+    height: 100px;
+}
+#errors-div {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }

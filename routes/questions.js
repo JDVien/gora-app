@@ -64,6 +64,7 @@ router.get('/new', csrfProtection, asyncHandler(async (req, res) => {
 router.post('/new', csrfProtection, questionValidators, requireAuth, asyncHandler(async (req, res) => {
     const { topicId, title, content, imgLink } = req.body;
     const question = db.Question.build({ topicId, title, content, imgLink, userId: req.session.auth.userId });
+    const topics = await db.Topic.findAll();
     const validatorErrors = validationResult(req);
 
     if (validatorErrors.isEmpty()) {
@@ -75,6 +76,7 @@ router.post('/new', csrfProtection, questionValidators, requireAuth, asyncHandle
         title: 'Ask a Question',
         question,
         errors,
+        topics,
         csrfToken: req.csrfToken(),
       });
     }

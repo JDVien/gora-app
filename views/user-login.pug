@@ -12,18 +12,17 @@ html
         link(href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet")
   body
     div(class='bg-img')
-      +validationErrorSummary(errors)
-      form(action='/users/login' method='post' class='form-container')
-        div
-          input(type='hidden' name='_csrf' value=csrfToken)
-          +field('Email Address', 'email', email)
-          +field('Password', 'password', null, 'password')
-          div(class='button-class')
-            button(type='submit' class='button-login') Log In
-            a(href='/' class='cancel-button') Cancel
-        p:  a(href='/users/register') Don't have an account?
-        div(class='demo-login')
-            a(id="demo-login" class="bttn-links" href="/users/login/demo") Demo
-
-
-block content
+      div(id="form-div")
+        form(action='/users/login' method='post' class='form-container')
+          div(id="errors-div")
+            +validationErrorSummary(errors)
+          div
+            input(type='hidden' name='_csrf' value=csrfToken)
+            +field('Email Address', 'email', email)
+            +field('Password', 'password', null, 'password')
+            div(class='button-class')
+              button(type='submit' class='button-login') Log In
+              a(href='/' class='cancel-button') Cancel
+          p:  a(href='/users/register') Don't have an account?
+          div(class='demo-login')
+              a(id="demo-login" class="bttn-links" href="/users/login/demo") Demo
