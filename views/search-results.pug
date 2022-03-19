@@ -1,20 +1,24 @@
-doctype html
-html
-  head
-      block head
-        meta(charset='utf-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        title Gora - #{title}
-        link(rel='stylesheet' href='/stylesheets/login.css')
-        link(rel='stylesheet' href='/stylesheets/reset.css')
-        script(src='/javascripts/search-questions.js' type='module')
-        script(src='/javascripts/questions.js' type='module')
+extends layout.pug
 
+include utils.pug
+
+block content
+  link(rel='stylesheet' href='/stylesheets/login.css')
+  link(rel='stylesheet' href='/stylesheets/reset.css')
+  link(rel='stylesheet' href='/stylesheets/search-results.css')
+  script(src='/javascripts/search-questions.js' type='module')
+  script(src='/javascripts/questions.js' type='module')
   body
-    h1= questionTitle
-    div
-      for question in questions
-        div(class='search-question-divs' id=`search-question-container-${question.id}`  style={'padding': '20px', 'dotted': '4px solid black'})
-          a= question.title
-          a= question.content
-          img(src=question.imgLink)
+    div(class='main-container')
+      h1= questionTitle
+        div
+          div(class='search-question-divs' id=`search-question-container-${user.id}` style={'padding': '20px', 'dotted': '4px solid black'})
+            for question in questions
+              div(class='question-items')
+                div(class='question-title')
+                  a(class='title' href=`/questions/${question.id}`)= question.title
+                  p posted: #{question.createdAt}
+                div(class='question-content')
+                  a= question.content
+                div(class='question-img')
+                  img(src=question.imgLink)
