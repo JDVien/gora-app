@@ -17,7 +17,7 @@ body, html {
 
 /* Background img styling */
 .create-bg-img{
-    background-image: url(../images/ghostface3.jpg);
+    background-image: url(../images/jason.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
