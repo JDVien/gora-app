@@ -73,7 +73,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 300px;
-  background-color: #585858;
+  background-color: rgb(83, 0, 17);
 }
 .vertical-nav li a {
   display: block;
@@ -107,9 +107,10 @@ h1 {
   top: 0;
   right: 0;
   overflow-y: hidden;
-  background-color: #881313;
+  background-color: rgb(105, 104, 104);
   text-decoration: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 80%;
 }
 
 li {
