@@ -13,21 +13,22 @@ html
         script(src='/javascripts/questions.js' type='module')
   body
     div(class='create-bg-img')
-        h2
-        +validationErrorSummary(errors)
+      div(id="form-div")
         form(action='/questions/new' method='post' class='create-container')
-            div(class='create-form') Ask a Question
-                input(type='hidden' name='_csrf' value=csrfToken)
-                label(for='topicId') Topic:
-                div(class="custom-select")
-                  select(name='topicId')
-                    each topic in topics
-                      option(value=topic.id)=topic.name
-                label(for='title') Title:
-                textarea(name='title' value=question.title)
-                label(for="content") Content:
-                textarea(name='content' value=question.content)
-                label(for='imgLink') Image Link:
-                input(type='text' name='imgLink' value=question.imgLink)
-                button(type='submit' class='create-submit-btn') Ask Question
-                a(href='/questions' id='create-cancel') Cancel
+          div(id="errors-div")
+            +validationErrorSummary(errors)
+          div(class='create-form')
+            h3 Ask a question
+            input(type='hidden' name='_csrf' value=csrfToken)
+            label(for='topicId') Topic:
+            select(name='topicId')
+              each topic in topics
+                option(value=topic.id)=topic.name
+            label(for='title') Title:
+            textarea(class="text-boxes" name='title' value=question.title)
+            label(for="content") Content:
+            textarea(class="text-boxes" id="content-area" name='content' value=question.content)
+            label(for='imgLink') Image Link:
+            input(type='text' name='imgLink' value=question.imgLink)
+            button(type='submit' class='create-submit-btn') Ask Question
+            a(href='/questions' id='create-cancel') Cancel

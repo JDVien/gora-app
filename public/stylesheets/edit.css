@@ -20,6 +20,7 @@
 #all-container {
     margin-top: 50px;
     margin-left: 100px;
+    padding-bottom: 30px;
 }
 
 #detail-container {
@@ -42,6 +43,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 img {
@@ -70,6 +72,7 @@ body {
     padding: 10px;
     background-color: #332f2f;
     border-radius: 5px;
+    margin-bottom: 40px;
 }
 
 #button-container {
