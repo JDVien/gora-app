@@ -176,3 +176,23 @@ a {
 .mini-search-icon:hover {
   opacity: 150%;
 }
+
+/* #ask-a-question {
+  padding: 5px;
+  width: 150%;
+  display: inline-flex;
+  justify-content: center;
+  border: 2px solid black;
+  font-family: "Nosifer", cursive;
+  font-size: 15px;
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+
+#ask-a-question:hover {
+
+  border: 3px solid black;
+  padding: 2px;
+  box-shadow: inset 0em -1em rgb(122, 12, 34);
+
+} */

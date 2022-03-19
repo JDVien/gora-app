@@ -33,7 +33,7 @@ block content
             div(id='question-content-div')
                 h1= question.title
                 h3= question.content
-                img(src=question.imgLink)
+                img(src=question.imgLink class='question-img')
         div(id="form-container")
             div(id='answer-question-btn')
                 button(class='create-answer' id=`create-answer-${question.id}`) Add Answer
