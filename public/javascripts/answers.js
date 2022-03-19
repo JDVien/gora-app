@@ -55,15 +55,19 @@ for (let i = 0; i < editBtnsAnswers.length; i++) {
             })
             // await the response
             const returnData = await res.json()
-            console.log(returnData)
 
             // if we get a Success response, the original post element should be updated
             if (returnData.message === "Success") {
-                console.log(returnData)
-                const postEle = document.getElementById(`answer-content-${answerId}`)
-                postEle.innerHTML = returnData.answer.content
-                // reapply hidden class to form
-                form.classList.add('hidden')
+                // const postEle = document.getElementById(`answer-container-${answerId}`)
+                // postEle.innerHTML = `
+                //         <h3>${returnData.answer.content}</h3>
+                //         <p>${returnData.answer.User.username}</p>
+                //         <a class="delete-answer" href="/answers/delete/14" onclick="return confirm('Are you sure you want to delete this answer?');" id="delete-answer-14">Delete</a>
+                //         <form class="" id="edit-answer-form-14"><label for="content">Content:</label><input type="text" name="content" value="duh!!!!" id="content-field-14"><button class="edit-submit-btn" id="submit-answer-btn-14">Submit Edit</button></form>
+                // `
+                // // reapply hidden class to form
+                // form.classList.add('hidden')
+                window.location.replace(`/questions/${returnData.answer.questionId}`)
             }
         })
     })

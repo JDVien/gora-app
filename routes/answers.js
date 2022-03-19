@@ -48,12 +48,14 @@ router.post('/new', csrfProtection, answerValidators, requireAuth, asyncHandler(
 }));
 
 router.patch('/:id(\\d+)', async(req, res) => {
-    const answer = await db.Answer.findByPk(req.params.id)
+    const answer = await db.Answer.findByPk(req.params.id, {
+        include: db.User
+    })
 
     if (!(req.body.content.length > 1)) {
         res.json({message: "Please provide a valid update"})
     }
-
+    console.log(answer.User.username)
     if (answer) {
         answer.content = req.body.content
         await answer.save()
