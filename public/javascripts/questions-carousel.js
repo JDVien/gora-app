@@ -26,7 +26,7 @@
   const questionResponse = await fetch('/questions/all');
   const questionData = await questionResponse.json();
   const questionDiv = document.querySelector('.carousel')
-  console.log(questionData)
+  // console.log(questionData)
 
   // <a href=/questions/${question.id}>
   questionData.forEach(question => {
