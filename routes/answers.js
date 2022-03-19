@@ -67,7 +67,7 @@ router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async 
     const answerId = parseInt(req.params.id, 10);
     const answer = await db.Answer.findByPk(answerId);
     await answer.destroy();
-    res.redirect('/questions');
+    res.redirect(`/questions/${answer.questionId}`);
 }))
 
 module.exports = router;
