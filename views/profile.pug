@@ -24,16 +24,17 @@ block content
             for question in questions
               div(class='question-items')
                 div(class='question-title')
-                  a( href=`/questions/${question.id}`)= question.title
+                  a(class='title' href=`/questions/${question.id}`)= question.title
                   p posted: #{question.createdAt}
                 div(class='question-content')
                   a= question.content
+                div(class='question-img')
                   img(src=question.imgLink)
         div
           div(class='hidden profile-answer-divs' id=`profile-answer-container-${user.id}`)
             for answer in answers
               div(class='answer-items')
-                a(href=`/questions/${answer.questionId}`)= answer.content
+                a(class='title' href=`/questions/${answer.questionId}`)= answer.content
                 p posted: #{answer.createdAt}
         div
           div(class='hidden profile-comment-divs' id=`profile-comment-container-${user.id}`)
