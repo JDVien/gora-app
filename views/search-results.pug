@@ -12,8 +12,8 @@ block content
     div(class='main-container')
       h1= questionTitle
         div
-          div(class='search-question-divs' id=`search-question-container-${user.id}` style={'padding': '20px', 'dotted': '4px solid black'})
-            for question in questions
+          for question in questions
+           div(class='search-question-divs' id=`search-question-container-${question.userId}` style={'padding': '20px', 'dotted': '4px solid black'})
               div(class='question-items')
                 div(class='question-title')
                   a(class='title' href=`/questions/${question.id}`)= question.title
