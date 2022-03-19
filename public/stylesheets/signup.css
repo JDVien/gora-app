@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   background-color: black;
+  margin: 0;
 }
 
 * {
@@ -13,11 +14,15 @@ body, html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+}
 
 /* Background img styling */
 .signup-bg-img{
-  background-image: url(../images/ghostface1.jpg);
+  background-image: url(../images/nosferatu.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   min-height: 100%;
   background-position: center;
@@ -27,16 +32,15 @@ body, html {
 }
 
 .form-container {
-  position: absolute;
   font-family: 'Nosifer', cursive;
-
   color: rgb(43, 18, 23);
   right: 0;
   margin: 20px;
-  max-width: 300px;
+  width: 350px;
   padding: 16px;
   background-color: rgb(105, 104, 104);
   opacity: 80%;
+  border-radius: 10px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -49,13 +53,33 @@ input[type=text]:focus, input[type=password]:focus {
   background-color: rgb(107, 10, 29);
   font-family: 'Nosifer', cursive;
   color: white;
-  padding: 16px 20px;
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .submit-button:hover {
   opacity: 3;
+}
+#errors-div {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+#field-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#field-div * {
+  padding: 5px;
+}
+#field-div input {
+  width: 240px;
 }
