@@ -72,6 +72,7 @@ router.patch('/:id(\\d+)', async(req, res) => {
 router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async (req, res) => {
   const commentId = parseInt(req.params.id, 10);
   const comment = await db.Comment.findByPk(commentId);
+  
   await comment.destroy();
   res.redirect(`/questions/${comment.answerId}`);
 }))
