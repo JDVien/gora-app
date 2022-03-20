@@ -1,23 +1,24 @@
 const commentBtn = document.querySelector(".create-comment");
+if(commentBtn) {
+  commentBtn.addEventListener("click", e => {
+    const answerId = e.target.id.split('-')[2];
+    const form = document.getElementById(`comment-form-${answerId}`)
+    if (form.classList.contains('hidden')) {
+      form.classList.remove('hidden')
+    } else {
+      form.classList.add('hidden')
+    }
+  })
+}
 
-commentBtn.addEventListener("click", e => {
-  const answerId = e.target.id.split('-')[2];
-  const form = document.getElementById(`comment-form-${answerId}`)
-  if (form.classList.contains('hidden')) {
-    form.classList.remove('hidden')
-  } else {
-    form.classList.add('hidden')
-  }
-})
+  const editBtnComments = document.querySelectorAll(`.edit-comment-btn`)
 
-const editBtnComments = document.querySelectorAll(`.edit-comment-btn`)
-
-for (let i = 0; i < editBtnComments.length; i++) {
-  const btn = editBtnComments[i];
-  btn.addEventListener("click", e => {
-    const commentId = e.target.id.split('-')[3]
-    console.log(commentId)
-    const form = document.getElementById(`edit-comment-form-${commentId}`)
+  for (let i = 0; i < editBtnComments.length; i++) {
+    const btn = editBtnComments[i];
+    btn.addEventListener("click", e => {
+      const commentId = e.target.id.split('-')[3]
+      console.log(commentId)
+      const form = document.getElementById(`edit-comment-form-${commentId}`)
     if (form.classList.contains('hidden')) {
         form.classList.remove('hidden')
     } else {
