@@ -1,26 +1,51 @@
-.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer, .delete-question, .delete-comment, .edit-comment-btn {
-    display:inline-block;
-    padding:0.46em 1.6em;
-    border:0.1em none #000000;
-    margin:0 0.2em 0.2em 0;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#000000;
-    text-shadow: 0 0.04em 0.04emrgba(0,0,0,0.35);
-    background-color:#b11414;
-    text-align:center;
-    transition: all 0.15s;
-    font-size: medium;
-    /* font-family: "Nosifer", cursive; */
-    border-radius: 5px;
+.edit-button,
+.create-answer,
+.delete-button,
+.edit-answer-btn,
+.delete-answer,
+.delete-question,
+.delete-comment,
+.comment-submit-btn,
+.create-comment,
+.answer-submit-btn,
+.edit-comment-btn {
+  display: inline-block;
+  padding: 0.46em 1.6em;
+  border: 0.1em none #000000;
+  margin: 0 0.2em 0.2em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04emrgba (0, 0, 0, 0.35);
+  background-color: #b11414;
+  text-align: center;
+  transition: all 0.15s;
+  font-size: medium;
+  font-family: "Nosifer", cursive;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button:hover,
+.create-answer:hover,
+.delete-button:hover,
+.edit-answer-btn:hover,
+.delete-answer:hover,
+.delete-question:hover,
+.delete-comment:hover,
+.comment-submit-btn:hover,
+.create-comment:hover,
+.edit-comment-btn:hover,
+.answer-submit-btn:hover {
+  color: rgb(255, 255, 255);
 }
 
 #all-container {
-    margin-top: 50px;
-    margin-left: 200px;
-    padding-bottom: 30px;
+  margin-top: 70px;
+  margin-left: 230px;
+  padding-bottom: 30px;
 }
 
 #detail-container {
@@ -31,7 +56,7 @@
   border: 2px solid black;
   margin: 10px;
   padding: 20px;
-  background-color: #332f2f;
+  background-color: rgb(26, 26, 26);
   border-radius: 10px;
 }
 
@@ -64,15 +89,22 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
+h1,
+h3,
+h2,
+h4 {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
 .answer-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    padding-left: 10px;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: #332f2f;
-    border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding-left: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgb(26, 26, 26);
+  border-radius: 5px;
 }
 
 .comment-container > #comment-body {
@@ -81,7 +113,7 @@ body {
   margin-left: 50px;
   padding-left: 10px;
   border: 1px solid black;
-  background-color: #524b4b;
+  background-color: rgb(47, 47, 47);
   border-radius: 5px;
   width: 85%;
 }
