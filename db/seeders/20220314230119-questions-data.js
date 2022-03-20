@@ -31,7 +31,7 @@ module.exports = {
       title:  "Where did Danny get his powers in The Shining?",
       content: "In Stephen King’s The Shining, Danny Torrance’s power of the “shining” is a key part of the story, but how did he come to possess this ability? Was it something he was born with or did he obtain them at some point before the story? ",
       userId: '4',
-      topicId: '2',
+      topicId: '1',
       imgLink: "https://filmandfurniture.com/wp-content/uploads/2017/11/danny-tricycle-the-shining-carpet-kubrick.png",
       createdAt: new Date(),
       updatedAt: new Date()
