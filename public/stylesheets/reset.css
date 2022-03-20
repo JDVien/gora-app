@@ -6,6 +6,7 @@ body {
 
 #topic {
   margin-left: 50px;
+  text-align: center;
 }
 
 /*
@@ -24,37 +25,63 @@ h1 {
   font-size: 2rem;
   color: rgb(182, 15, 48);
 }
-.vertical-nav {
-  height: 100%;
-  width: 250px;
-  display: flex;
-  position: fixed;
-  align-items: space-around;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 
 .nav-item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px solid rgb(47, 47, 47);
+  /* border-top: 1px solid rgb(47, 47, 47); */
 }
 
 .vertical-nav-text {
   font-weight: bold;
   font-family: "Nosifer", cursive;
   margin-right: 10px;
+  margin-left: 25px;
 }
 
-.inline-block {
-  display: inline-block;
+.vertical-nav-text:hover {
+  color: rgb(148, 20, 33);
 }
 
-.vertical-nav-ul {
-  margin-top: 2000px;
+.vertical-nav {
+  height: 100%;
+  width: 220px;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 60px;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-nav li {
+  margin: 0;
+}
+
+.vertical-nav li a {
+  color: rgb(212, 212, 212);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.vertical-nav li:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(190, 30, 45);
 }
 
 .search-container {
@@ -66,9 +93,14 @@ h1 {
 #search-bar {
   background-color: rgb(70, 70, 70);
   border-radius: 7px;
-  width: 450px;
+  width: 400px;
   height: 45px;
   padding-left: 10px;
+}
+
+.vnav-image-div {
+  width: 30px;
+  margin-top: 10px;
 }
 /* h1,
 h2,
@@ -96,32 +128,10 @@ nav {
 
 h1 {
   font-size: 2rem;
-  font-family: "Nosifer", cursive;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(182, 15, 48);
 }
 
-.vertical-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  background-color: rgb(26, 26, 26);
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.vertical-nav li a {
-  display: block;
-  color: rgb(212, 212, 212);
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color on hover */
-.vertical-nav li a:hover {
-  background-color: rgb(8, 8, 8);
-  color: #fff;
-}
 .icon {
   margin-right: 10px;
 }
@@ -143,7 +153,7 @@ h1 {
   background-color: rgb(29, 29, 29);
   text-decoration: none;
   opacity: 70%;
-  padding: 0 20px 0 28px;
+  padding: 0 20px 0 40px;
 }
 
 li {
@@ -157,27 +167,25 @@ li {
 }
 
 #demo-login {
-  padding: 10px;
+  padding: 20px;
 }
 
 #user-login {
-  padding: 10px;
+  padding: 20px;
 }
 
 .user-logout {
-  font-weight: bold;
-  font-family: "Nosifer", cursive;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 20px;
   cursor: pointer;
 }
 
-#profile {
-  font-weight: bold;
-  font-family: "Nosifer", cursive;
+/* #profile {
+   font-weight: bold;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   border-radius: 10px;
-}
+} */
 
 a {
   color: #ffffff;
@@ -218,14 +226,13 @@ a {
   width: 150px;
   cursor: pointer;
   margin-top: 10px;
+  margin-left: 15px;
 }
 
 #ask-a-question {
-  font-weight: bold;
-  font-family: "Nosifer", cursive;
   border-radius: 10px;
   margin-right: 10px;
-  width: 250px;
+  width: 180px;
 }
 
 #footer {

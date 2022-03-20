@@ -1,36 +1,13 @@
-
-// let i = 0;
-// const getQuestion = async () => {
-//   const nextQuestionBttn = document.querySelector('.get-question')
-//   const carousel = document.querySelector('.question-divs')
-//   const questionResponse = await fetch('/questions/all');
-//   const questionData = await questionResponse.json();
-//   const questionDiv = document.querySelector('.questions-divs')
-//   console.log(questionData)
-// nextQuestionBttn.onclick = function() {
-
-//     console.log(i)
-
-//     questionDiv.innerHTML = `
-//         <div class='carousel-item'>
-//           <p>${questionData[i].title}</p>
-//           <a href=/questions/${questionData[i].id}> <img src=${questionData[i].imgLink}></a>
-//         </div>
-//     `
-//     i++;
-//   }
-// }
-// getQuestion();
-// window.addEventListener('DOMContentLoaded', async (event) => {
-
-  const questionResponse = await fetch('/questions/all');
-  const questionData = await questionResponse.json();
-  const questionDiv = document.querySelector('.carousel')
-  // console.log(questionData)
+const url = window.location.href.split('/')[4];
+console.log(url);
+  const topicResponse = await fetch(`/questions/topic/${url}`);
+  const topicData = await topicResponse.json();
+  const topicDiv = document.querySelector('.carousel')
+  // console.log(topicData)
 
   // <a href=/questions/${question.id}>
-  questionData.forEach(question => {
-    questionDiv.innerHTML += `
+  topicData.forEach(question => {
+    topicDiv.innerHTML += `
     <div class='carousel_item carousel_item--hidden'>
     <p>${question.title}</p>
     <a href=/questions/${question.id}><img src=${question.imgLink}></a>

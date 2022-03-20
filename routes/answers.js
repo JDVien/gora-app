@@ -55,7 +55,7 @@ router.patch('/:id(\\d+)', async(req, res) => {
     if (!(req.body.content.length > 1)) {
         res.json({message: "Please provide a valid update"})
     }
-    console.log(answer.User.username)
+    // console.log(answer.User.username)
     if (answer) {
         answer.content = req.body.content
         await answer.save()

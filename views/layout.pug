@@ -27,24 +27,30 @@ html
         else
           a(id='profile' href=`/profile/${user.id}`) Profile
           form(id='user-logout' action='/users/logout' method='post')
-            a(class="user-logout" href="javascript:{}" onclick="document.getElementById('user-logout').submit();") Logout
+            a(class="user-logout" href="javascript:{}" onclick="document.getElementById('user-logout').submit();") Log Out
 
     div(class='vertical-nav')
       ul(class='vertical-nav-ul')
         li
           a(id="all" class='nav-item topics' href="/questions")
+            div(class="vnav-image-div")
+              img(src='https://cdn-icons-png.flaticon.com/512/1047/1047494.png' style='background:transparent; width:100%; height:100%')
             div(class="vertical-nav-text inline-block") All
-            div(class="inline-block")
-              img(src='https://cdn-icons-png.flaticon.com/512/1047/1047494.png' style='background:transparent; width:20%; height:20%')
         li
-          a(id="cinema" class="nav-item topics" href="/topics/1/questions") Cinema
-            img(src='https://cdn-icons-png.flaticon.com/512/683/683103.png' style='background:transparent; width:20%; height:20%')
+          a(id="cinema" class='nav-item topics' href="/topics/1/questions")
+            div(class="vnav-image-div")
+              img(src='https://cdn-icons-png.flaticon.com/512/683/683103.png' style='background:transparent; width:100%; height:100%')
+            div(class="vertical-nav-text inline-block") Cinema
         li
-          a(id="literature" class="nav-item topics" href="/topics/2/questions") Literature
-            img(src='https://cdn-icons-png.flaticon.com/512/2178/2178213.png' style='background:transparent; width:20%; height:20%')
+          a(id="literature" class='nav-item topics' href="/topics/2/questions")
+            div(class="vnav-image-div")
+              img(src='https://cdn-icons-png.flaticon.com/512/2178/2178213.png' style='background:transparent; width:100%; height:100%')
+            div(class="vertical-nav-text inline-block") Literature
         li
-          a(id="gaming" class="nav-item topics" href="/topics/3/questions") Gaming
-            img(src='https://cdn-icons-png.flaticon.com/512/5532/5532803.png' style='background:transparent; width:20%; height:20%')
+          a(id="gaming" class='nav-item topics' href="/topics/3/questions")
+            div(class="vnav-image-div")
+              img(src='https://cdn-icons-png.flaticon.com/512/5532/5532803.png' style='background:transparent; width:100%; height:100%')
+            div(class="vertical-nav-text inline-block") Gaming
 
     block content
 
