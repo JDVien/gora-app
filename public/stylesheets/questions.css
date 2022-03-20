@@ -2,7 +2,8 @@
   overflow: hidden;
   max-width: 1000px;
   position: relative;
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
 }
 
@@ -13,7 +14,7 @@
 .carousel .carousel_item img {
   width: 100%;
   max-width: 1000px;
-  height: 700px;
+  height: 670px;
   border-radius: 10px;
 }
 .carousel .carousel_item--visible {
@@ -31,18 +32,30 @@
 .carousel_actions button {
   border-radius: 50px;
   border: 0;
-  font-weight: bold;
   cursor: pointer;
   width: 60px;
   height: 60px;
-  opacity: 40%;
-  background-color: red;
+  opacity: 45%;
+  background: rgb(0, 0, 0);
 }
 
 .carousel_actions button:hover {
   opacity: 75%;
 }
-
+#carousel_button--prev {
+  font-size: 40px;
+  color: white;
+}
+#carousel_button--prev:hover {
+  color: rgb(148, 20, 33);
+}
+#carousel_button--next {
+  font-size: 40px;
+  color: white;
+}
+#carousel_button--next:hover {
+  color: rgb(148, 20, 33);
+}
 .carousel .carousel_actions button#carousel_button--prev {
   margin-left: 20px;
 }
@@ -51,9 +64,9 @@
 }
 
 #question-carousel-container {
-  background-color: rgb(105, 104, 104);
-  margin-left: 220px;
-  margin-top: 50px;
+  background-color: rgb(26, 26, 26);
+  margin-left: 240px;
+  margin-top: 75px;
   display: flex;
   justify-content: center;
   align-items: center;

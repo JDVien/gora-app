@@ -19,7 +19,8 @@ body {
   grid-area: logo;
   display: inline-flex;
   align-items: center;
-  font-family: "Nosifer", cursive;
+  justify-content: center;
+  /* font-family: "Nosifer", cursive; */
 }
 /* .user-login {
   grid-area: login;
