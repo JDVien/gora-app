@@ -40,7 +40,7 @@ block content
           div(class='hidden profile-comment-divs' id=`profile-comment-container-${user.id}`)
             for comment in comments
               div(class='comment-items')
-                a(href=`/questions/${comment.answerId}`)= comment.content
+                a(class='title' href=`/questions/${comment.answerId}`)= comment.content
                 p posted: #{comment.createdAt}
     else
       h1 Sign in to view profile

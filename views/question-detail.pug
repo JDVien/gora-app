@@ -43,7 +43,7 @@ block content
                     input(type='hidden' name='_csrf' value=csrfToken)
                     input(type='hidden' name='questionId' value=question.id)
                     label(for="content") Content:
-                    input(type="text" name='content' value='')
+                    input(type="text" name='content' value='' required)
                     button(class='answer-submit-btn' id=`answer-btn-${question.id}`) Submit Answer
         if question.Answers.length > 0
             for answer in question.Answers
@@ -67,7 +67,7 @@ block content
                                     input(type='hidden' name='_csrf' value=csrfToken)
                                     input(type='hidden' name='answerId' value=answer.id)
                                     label(for="content") Content:
-                                    input(type="text" name='content' value='')
+                                    input(type="text" name='content' value='' required)
                                     button(class='comment-submit-btn' id=`comment-btn-${answer.id}`) Submit Comment
                 for comment in answer.Comments
                     div(class=`comment-container` id=`comment-container-${comment.id}`)
