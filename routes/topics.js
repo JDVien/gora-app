@@ -34,8 +34,8 @@ router.get('/:id(\\d+)/questions/:id(\\d+)', requireAuth, asyncHandler(async (re
     } else {
         activeUser = null;
     }
-    console.log('----------------------> \n\n', req.session.auth.userId)
-    console.log('----------------------> \n\n', question.userId)
+    // console.log('----------------------> \n\n', req.session.auth.userId)
+    // console.log('----------------------> \n\n', question.userId)
     res.render('question-detail', { question, title: 'Details', activeUser});
 }));
 

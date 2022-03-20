@@ -101,7 +101,7 @@ router.post('/register', userValidators, csrfProtection, asyncHandler(async(req,
     res.redirect('/questions');
   } else {
     const errors = validatorErrors.array().map(error => error.msg);
-    console.log(errors)
+    // console.log(errors)
     res.render('user-register', { errors, user, title: 'Register', csrfToken: req.csrfToken() });
   }
 }));

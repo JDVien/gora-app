@@ -16,7 +16,7 @@ router.get('/:id(\\d+)/', requireAuth, asyncHandler(async(req, res) => {
   let questions = await db.Question.findAll({where: {userId}, include: { model: db.Answer }})
   let answers = await db.Answer.findAll({where: {userId}, include: {model: db.Question}})
   let comments = await db.Comment.findAll({where: {userId}})
-  console.log(questions);
+  // console.log(questions);
   let activeUser;
     if (req.session.auth.userId){
         activeUser = req.session.auth.userId;
