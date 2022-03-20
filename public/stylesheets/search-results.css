@@ -62,7 +62,11 @@
   padding: 20px;
   font-weight: bolder;
   font-size: large;
+  text-decoration: underline;
+}
 
+.title:hover {
+  text-decoration: underline overline #FF3028;
 }
 
 .answer-items {
@@ -78,5 +82,5 @@
 
 .main-container {
   margin-top: 50px;
-  margin-left: 100px;
+  margin-left: 200px;
 }
