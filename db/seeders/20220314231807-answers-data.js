@@ -177,6 +177,174 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        content: "I can't be in tight spaces after seeing that movie either haha",
+        userId: 4,
+        questionId: 9,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I'm scared of the woods because of every horror movie ever.",
+        userId: 3,
+        questionId: 9,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Hard to develop a genuine phobia just from watching a movie.",
+        userId: 1,
+        questionId: 9,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Rick Baker! Legend!",
+        userId: 4,
+        questionId: 10,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "You could probably just google it bro",
+        userId: 1,
+        questionId: 10,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Rick Baker is the man",
+        userId: 2,
+        questionId: 10,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "There really are too many plot holes to count",
+        userId: 1,
+        questionId: 11,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "What if the person being followed is on an airplane?",
+        userId: 2,
+        questionId: 11,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "It's a fun movie, but I agree, lots of plot holes.",
+        userId: 3,
+        questionId: 11,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "The had voice actress Mercedes McCambridge do the voice for the possession scenes",
+        userId: 1,
+        questionId: 12,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Yeah idk but that could not have been Linda Blair",
+        userId: 2,
+        questionId: 12,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I think it was the devil",
+        userId: 3,
+        questionId: 12,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "You're crazy bro, that movie is campy but def still watchable",
+        userId: 4,
+        questionId: 13,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I like that movie!",
+        userId: 3,
+        questionId: 13,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I think horror films in general don't age great most of the time",
+        userId: 2,
+        questionId: 13,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "We as humans are all capable of being the villain",
+        userId: 4,
+        questionId: 14,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I mean, if we are talking monsters, I would say it's...the monster.",
+        userId: 1,
+        questionId: 14,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I haven't read it, but it's probably a little bit of both",
+        userId: 2,
+        questionId: 14,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "The Gunslinger series. That's his magnum opus.",
+        userId: 1,
+        questionId: 15,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "'It' is not really that scary, I would go with The Shining",
+        userId: 2,
+        questionId: 15,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Hard to really top The Stand. Has everything you want from King",
+        userId: 3,
+        questionId: 15,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "That is a scarrry book, everyone is creepy in it",
+        userId: 2,
+        questionId: 16,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "My vote is Hannibal Lecter",
+        userId: 3,
+        questionId: 16,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Lecter gets in your head. Buffalo Bill gets under your skin, literally lol",
+        userId: 4,
+        questionId: 16,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
    ], {});
   },
 
