@@ -25,7 +25,7 @@ block content
               div(class='question-items')
                 div(class='question-title')
                   a(class='title' href=`/questions/${question.id}`)= question.title
-                  p posted: #{question.createdAt}
+                  p(class='timestamp') posted: #{question.createdAt}
                 div(class='question-content')
                   a= question.content
                 div(class='question-img')
@@ -35,13 +35,13 @@ block content
             for answer in answers
               div(class='answer-items')
                 a(class='title' href=`/questions/${answer.questionId}`)= answer.content
-                p posted: #{answer.createdAt}
+                p(class='timestamp') posted: #{answer.createdAt}
         div
           div(class='hidden profile-comment-divs' id=`profile-comment-container-${user.id}`)
             for comment in comments
               div(class='comment-items')
                 a(class='title' href=`/questions/${comment.answerId}`)= comment.content
-                p posted: #{comment.createdAt}
+                p(class='timestamp') posted: #{comment.createdAt}
     else
       h1 Sign in to view profile
         a(id="user-login" href="/users/login") Log In

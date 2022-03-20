@@ -207,6 +207,11 @@ p {
   font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.timestamp {
+  font-size: 14px;
+  color: grey
+}
+
 .horizontal-nav a:hover {
   color: rgb(190, 30, 45);
 }

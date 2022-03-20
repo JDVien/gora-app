@@ -1,5 +1,6 @@
 a {
   text-align: center;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .question-img {
   padding: 50px;
@@ -11,10 +12,11 @@ a {
 
 .user-profile-content-container {
 
-  background-color:  rgb(129, 127, 127);
   display: flex;
   justify-content: space-around;
   margin: 0;
+  background-color: rgb(29, 29, 29);
+  border-radius: 10px;
 }
 
 #profile-questions {
@@ -43,32 +45,44 @@ a {
   font-size: 15px;
   background-color: rgb(70, 70, 70);
   color: white;
+  border-radius: 10px;
 }
 
 
 .prof-filter:hover {
-
   border: 3px solid black;
   padding: 2px;
-  box-shadow: inset 0em -1em rgb(122, 12, 34);
+  /* box-shadow: inset 0em -1em rgb(122, 12, 34); */
+  color: rgb(182, 15, 48);
   opacity: 75%;
+  cursor: pointer;
 }
+
 
 .profile-question-divs {
   border: 2px solid rgb(70, 70, 70);
-  background-color: rgb(129, 127, 127);
+  background-color: rgb(29, 29, 29);
   text-align: center;
+  border-radius: 10px;
 }
 
 .profile-answer-divs {
   padding: 10px;
   border: 2px solid rgb(70, 70, 70);
-  background-color: rgb(129, 127, 127);
+  background-color: rgb(29, 29, 29);
+  border-radius: 10px;
 }
 
+.profile-comment-divs {
+  border: 2px solid rgb(70, 70, 70);
+  background-color: rgb(29, 29, 29);
+  padding: 10px;
+  border-radius: 10px;
+}
 .question-items {
   padding: 25px;
   border: 2px solid rgb(70, 70, 70);
+  border-radius: 10px;
 }
 
 .title {
@@ -76,10 +90,17 @@ a {
   font-weight: bolder;
   font-size: larger;
   text-decoration: underline;
+  font: 32px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .title:hover {
-  text-decoration: underline overline #FF3028;
+  text-decoration: underline #FF3028;
+  cursor: pointer;
+  color: rgb(182, 15, 48);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .answer-items {
@@ -91,16 +112,10 @@ a {
   padding: 25px;
 }
 
-.profile-comment-divs {
-  border: 2px solid rgb(70, 70, 70);
-  background-color:  rgb(129, 127, 127);
-  padding: 10px;
-}
 
 .main-container {
-  margin-top: 50px;
-  margin-left: 200px;
-
+  margin-top: 25px;
+  margin-left: 150px;
 }
 
 body {
