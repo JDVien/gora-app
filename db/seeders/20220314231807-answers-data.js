@@ -17,7 +17,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        content: "Pretty sure someone survives, but I have no idea. Watch it again, maybe, it's a classic now.",
+        content: "Pretty sure someone survives, but I have no idea which one. Watch it again, maybe, it's a classic.",
         userId: 2,
         questionId: 1,
         createdAt: new Date(),
