@@ -39,6 +39,7 @@ body {
   font-size: 40px;
   padding: 20px 40px;
   background-color: rgb(70, 70, 70);
+  border-radius: 10px;
 }
 .main-container {
   background-color: black;
