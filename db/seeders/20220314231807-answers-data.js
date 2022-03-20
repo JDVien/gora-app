@@ -345,6 +345,174 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        content: "Yeah I mean they have made 1000 vampire movies because of Dracula",
+        userId: 3,
+        questionId: 17,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Everyone knows Dracula, for sure",
+        userId: 4,
+        questionId: 17,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Stephen King has had a massive influence, but yeah Dracula is hard to top",
+        userId: 1,
+        questionId: 17,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Is this even horror? Romance in a horror-themed world, more like it",
+        userId: 4,
+        questionId: 18,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Something about vampires being charming people? Probably goes back to Dracula",
+        userId: 1,
+        questionId: 18,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "That's interesting, hadn't thought of it before",
+        userId: 2,
+        questionId: 18,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Yeah, At the Mountains of Madness is about the longest of what he wrote",
+        userId: 1,
+        questionId: 19,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "The Case of Dexter Ward is another longer one of his!",
+        userId: 2,
+        questionId: 19,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "He was a master of the short story, no need to extend it out for no reason",
+        userId: 3,
+        questionId: 19,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "World War Z really isn't that good. Like a beach read for guys",
+        userId: 2,
+        questionId: 20,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I thought both the movie and book were pretty disappointing",
+        userId: 3,
+        questionId: 20,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "The structure of the book really couldn't be translated to film, to be fair",
+        userId: 4,
+        questionId: 20,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Not as good as his father, but pretty good",
+        userId: 3,
+        questionId: 21,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "They aren't as sophisticated as King's best works, but he's still got time",
+        userId: 4,
+        questionId: 21,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I really liked Heart Shaped Box, reminded me a lot of King",
+        userId: 1,
+        questionId: 21,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I mean anything Robert Kirkman makes, people will pay attention to",
+        userId: 4,
+        questionId: 22,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Yeah people only know it from the show, but it's still good",
+        userId: 1,
+        questionId: 22,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I thought the series was awesome, idk what you mean",
+        userId: 2,
+        questionId: 22,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Locke & Key is pretty awesome, great use of settings in that",
+        userId: 1,
+        questionId: 23,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Through the Woods! very creepy setting",
+        userId: 2,
+        questionId: 23,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Oh man I don't think anything did that better than 30 days of night",
+        userId: 3,
+        questionId: 23,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Time will tell, but I think there is some serious potential",
+        userId: 2,
+        questionId: 24,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "If they don't get this right, then someone seriously messed up. It's perfect for a movie or a show",
+        userId: 3,
+        questionId: 24,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Video game adaptations are never good, but idk",
+        userId: 4,
+        questionId: 24,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
    ], {});
   },
 
