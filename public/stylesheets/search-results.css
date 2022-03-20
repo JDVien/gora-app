@@ -1,5 +1,9 @@
 .question-img {
   padding: 50px;
+
+}
+.question-img img {
+  max-width: 99%;
 }
 
 .search-question-divs {

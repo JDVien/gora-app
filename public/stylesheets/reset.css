@@ -101,6 +101,10 @@ h1 {
   padding-left: 10px;
 }
 
+.search-container input {
+  color:white;
+}
+
 .vnav-image-div {
   width: 30px;
   margin-top: 10px;
@@ -250,8 +254,17 @@ p {
 
 #footer {
   margin-left: 245px;
-  color: rgb(105, 104, 104);
+  color: rgb(141, 140, 140);
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#footer a {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgb(141, 140, 140);
+}
+
+#footer a:hover {
+  color:rgb(148, 20, 33);
 }
 /* #ask-a-question {
   padding: 5px;
@@ -272,3 +285,7 @@ p {
   box-shadow: inset 0em -1em rgb(122, 12, 34);
 
 } */
+
+input {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}

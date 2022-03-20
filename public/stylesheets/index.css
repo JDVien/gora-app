@@ -134,6 +134,14 @@ h1 {
   color: rgb(105, 104, 104);
 }
 
+#footer a {
+  color: rgb(141, 140, 140);
+}
+
+#footer a:hover {
+  color:rgb(148, 20, 33);
+}
+
 #search-bar {
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -197,4 +205,15 @@ h1 {
 .background-image-2:hover {
   transform: scale(1.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.motto-container {
+  width: 450px;
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+#motto {
+  color: rgb(207, 17, 36);
+  font-size: larger;
 }

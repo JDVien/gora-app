@@ -83,8 +83,8 @@ router.get('/', function(req, res, next) {
 });
 
 //GET users/register
-router.get('/register', csrfProtection, asyncHandler((req, res, next) => {
-  const user = db.User.build();
+router.get('/register', csrfProtection, asyncHandler(async(req, res, next) => {
+  const user = await db.User.build();
   res.render('user-register', { user, title: 'Register', csrfToken: req.csrfToken() });
 }));
 

@@ -1,4 +1,5 @@
 .edit-button,
+.edit-submit-btn,
 .create-answer,
 .delete-button,
 .edit-answer-btn,
@@ -30,6 +31,7 @@
 
 .edit-button:hover,
 .create-answer:hover,
+.edit-submit-btn:hover,
 .delete-button:hover,
 .edit-answer-btn:hover,
 .delete-answer:hover,
@@ -96,7 +98,7 @@ h4 {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.answer-container {
+.answer-container > #answer-body {
   display: flex;
   justify-content: space-between;
   margin: 10px;
@@ -112,10 +114,22 @@ h4 {
   justify-content: space-between;
   margin-left: 50px;
   padding-left: 10px;
+  padding-right: 10px;
   border: 1px solid black;
   background-color: rgb(47, 47, 47);
   border-radius: 5px;
   width: 85%;
+}
+
+
+#comment-body p, .answer-container p {
+  font-size: medium;
+  margin-right: 10px;
+}
+
+#username-bttns {
+  display: flex;
+  justify-content: center;
 }
 
 #body-btns {
