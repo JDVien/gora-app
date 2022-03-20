@@ -85,4 +85,13 @@
     updateSlidePosition();
   }
 
+  const url = window.location.href.split('/')[4];
+  const leftMenu = document.querySelectorAll('.vertical-nav-li')
+  leftMenu[0].style.backgroundColor = '';
+  leftMenu[1].style.backgroundColor = '';
+  leftMenu[2].style.backgroundColor = '';
+  leftMenu[3].style.backgroundColor = '';
+  if(url===undefined){
+    leftMenu[0].style.backgroundColor = 'black';
+  }
 // })

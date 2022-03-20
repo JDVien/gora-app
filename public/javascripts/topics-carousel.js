@@ -1,5 +1,6 @@
 const url = window.location.href.split('/')[4];
-console.log(url);
+// console.log(window.location.href);
+// console.log(url);
   const topicResponse = await fetch(`/questions/topic/${url}`);
   const topicData = await topicResponse.json();
   const topicDiv = document.querySelector('.carousel')
@@ -60,6 +61,15 @@ console.log(url);
       slidePosition--;
     }
     updateSlidePosition();
+  }
+
+  const leftMenu = document.querySelectorAll('.vertical-nav-li')
+  leftMenu[0].style.backgroundColor = '';
+  leftMenu[1].style.backgroundColor = '';
+  leftMenu[2].style.backgroundColor = '';
+  leftMenu[3].style.backgroundColor = '';
+  if(url==='1' || url==='2' || url==='3') {
+    leftMenu[url].style.backgroundColor = 'black';
   }
 
 // })
