@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   background-color: black;
   margin: 0;
@@ -10,14 +11,14 @@ body, html {
 
 /* Form styling */
 .signup-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Background img styling */
-.signup-bg-img{
+.signup-bg-img {
   background-image: url(../images/nosferatu.jpg);
   display: flex;
   justify-content: center;
@@ -32,18 +33,19 @@ body, html {
 }
 
 .form-container {
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   color: rgb(43, 18, 23);
   right: 0;
   margin: 20px;
-  width: 350px;
+  width: 550px;
   padding: 16px;
   background-color: rgb(105, 104, 104);
   opacity: 80%;
   border-radius: 10px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -51,12 +53,13 @@ input[type=text]:focus, input[type=password]:focus {
 /* Submit button styling */
 .submit-button {
   background-color: rgb(107, 10, 29);
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   color: white;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 440px;
+  height: 45px;
   opacity: 0.9;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -69,7 +72,7 @@ input[type=text]:focus, input[type=password]:focus {
 #errors-div {
   font-size: 15px;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 #field-div {
   display: flex;
@@ -81,5 +84,7 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 5px;
 }
 #field-div input {
-  width: 240px;
+  width: 440px;
+  border-radius: 5px;
+  height: 45px;
 }

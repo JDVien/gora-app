@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -9,7 +10,7 @@ body, html {
 
 .bg-img {
   /* The image used */
-  background-image: url(../images/shining-wallpaper_129728.jpg) ;
+  background-image: url(../images/shining-wallpaper_129728.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +25,12 @@ body, html {
 
 /* Add styles to the form container */
 .form-container {
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
 
   color: rgb(43, 18, 23);
   right: 0;
   margin: 20px;
-  width: 350px;
+  width: 550px;
   padding: 16px;
   background-color: rgb(105, 104, 104);
   opacity: 80%;
@@ -37,15 +38,18 @@ body, html {
 }
 
 /* Full-width input fields */
-  input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  border-radius: 5px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -53,7 +57,7 @@ input[type=text]:focus, input[type=password]:focus {
 /* Set a style for the submit button */
 .button-login {
   background-color: rgb(107, 10, 29);
-  font-family: 'Nosifer', cursive;
+  font-family: "Nosifer", cursive;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -72,5 +76,5 @@ input[type=text]:focus, input[type=password]:focus {
 #errors-div {
   font-size: 15px;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
