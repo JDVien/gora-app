@@ -36,7 +36,7 @@ h1 {
 
 .vertical-nav-text {
   font-weight: bold;
-  font-family: "Nosifer", cursive;
+  /* font-family: "Nosifer", cursive; */
   margin-right: 10px;
   margin-left: 25px;
 }
@@ -194,8 +194,8 @@ a {
 
 * {
   box-sizing: border-box;
-  /* font: 18px "Lucida Grande", Helvetica, Arial, sans-serif; */
-  font-family: "Nosifer", cursive;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* font-family: "Nosifer", cursive; */
   font-size: 16px;
 }
 
