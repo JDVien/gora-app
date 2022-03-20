@@ -5,6 +5,10 @@ a {
   padding: 50px;
 }
 
+.question-img img {
+  max-width: 90%;
+}
+
 .user-profile-content-container {
 
   background-color:  rgb(129, 127, 127);
@@ -41,6 +45,7 @@ a {
   color: white;
 }
 
+
 .prof-filter:hover {
 
   border: 3px solid black;
@@ -70,6 +75,11 @@ a {
   padding: 20px;
   font-weight: bolder;
   font-size: larger;
+  text-decoration: underline;
+}
+
+.title:hover {
+  text-decoration: underline overline #FF3028;
 }
 
 .answer-items {
@@ -77,13 +87,23 @@ a {
   border: 2px solid rgb(70, 70, 70);
 }
 
+.comment-items {
+  padding: 25px;
+}
+
 .profile-comment-divs {
   border: 2px solid rgb(70, 70, 70);
   background-color:  rgb(129, 127, 127);
-
+  padding: 10px;
 }
 
 .main-container {
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+
+body {
   margin-top: 50px;
   margin-left: 100px;
 }
