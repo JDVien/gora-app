@@ -19,6 +19,6 @@ block content
                   a(class='title' href=`/questions/${question.id}`)= question.title
                   p(class='timestamp') posted: #{question.createdAt}
                 div(class='question-content')
-                  a= question.content
+                  a(id='search-question-content')= question.content
                 div(class='question-img')
                   img(src=question.imgLink)

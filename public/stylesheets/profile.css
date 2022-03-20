@@ -1,9 +1,10 @@
-a {
-  text-align: center;
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+
 .question-img {
   padding: 50px;
+}
+
+.question-content a {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .question-img img {

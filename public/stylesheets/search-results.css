@@ -83,7 +83,7 @@
   margin-top: 75px;
 }
 
-a {
+.question-title a {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -91,4 +91,8 @@ a {
 .search-questions-div,
 .question-items {
   border-radius: 10px;
+}
+
+#search-question-content {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
