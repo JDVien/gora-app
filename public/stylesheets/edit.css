@@ -1,4 +1,4 @@
-.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer, .delete-question {
+.edit-button, .create-answer, .delete-button, .edit-answer-btn, .delete-answer, .delete-question, .delete-comment, .edit-comment-btn {
     display:inline-block;
     padding:0.46em 1.6em;
     border:0.1em none #000000;
@@ -12,7 +12,7 @@
     background-color:#b11414;
     text-align:center;
     transition: all 0.15s;
-    font-size: x-large;
+    font-size: medium;
     /* font-family: "Nosifer", cursive; */
     border-radius: 5px;
 }
@@ -67,12 +67,27 @@ body {
 .answer-container {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 10px;
+    padding-left: 10px;
     border: 1px solid black;
     padding: 10px;
     background-color: #332f2f;
     border-radius: 5px;
-    margin-bottom: 40px;
+}
+
+.comment-container > #comment-body {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  padding-left: 10px;
+  border: 1px solid black;
+  background-color: #524b4b;
+  border-radius: 5px;
+  width: 85%;
+}
+
+#body-btns {
+  padding: 10px;
 }
 
 #button-container {
