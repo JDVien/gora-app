@@ -2,29 +2,28 @@
   padding: 50px;
 }
 
-
 .search-question-divs {
-
   border: 2px solid rgb(70, 70, 70);
-  background-color: rgb(129, 127, 127);
+  background-color: rgb(29, 29, 29);
   text-align: center;
   margin: 0;
+  border-radius: 10px;
 }
 
 #profile-questions {
- width: 150%;
- height: 150%;
- opacity: 0;
+  width: 150%;
+  height: 150%;
+  opacity: 0;
 }
 #profile-answers {
- width: 150%;
- height: 150%;
- opacity: 0;
+  width: 150%;
+  height: 150%;
+  opacity: 0;
 }
 #profile-comments {
- width: 150%;
- height: 150%;
- opacity: 0;
+  width: 150%;
+  height: 150%;
+  opacity: 0;
 }
 
 .prof-filter {
@@ -35,12 +34,11 @@
   border: 2px solid black;
   font-family: "Nosifer", cursive;
   font-size: 15px;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(29, 29, 29);
   color: white;
 }
 
 .prof-filter:hover {
-
   border: 3px solid black;
   padding: 2px;
   box-shadow: inset 0em -1em rgb(122, 12, 34);
@@ -49,13 +47,14 @@
 
 .search-answer-divs {
   padding: 10px;
-  border: 2px solid rgb(70, 70, 70);
-  background-color: rgb(129, 127, 127);
+  border: 2px solid rgb(29, 29, 29);
+  background-color: rgb(29, 29, 29);
+  border-radius: 10px;
 }
 
 .question-items {
   padding: 25px;
-  border: 2px solid rgb(70, 70, 70);
+  border: 2px solid rgb(29, 29, 29);
 }
 
 .title {
@@ -66,21 +65,30 @@
 }
 
 .title:hover {
-  text-decoration: underline overline #FF3028;
+  text-decoration: underline overline #ff3028;
 }
 
 .answer-items {
   padding: 25px;
-  border: 2px solid rgb(70, 70, 70);
+  border: 2px solid rgb(29, 29, 29);
 }
 
 .search-comment-divs {
   border: 2px solid rgb(70, 70, 70);
-  background-color:  rgb(129, 127, 127);
-
+  background-color: rgb(29, 29, 29);
 }
 
 .main-container {
-  margin-top: 50px;
-  margin-left: 200px;
+  margin-left: 240px;
+  margin-top: 75px;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-questions-div,
+.question-items {
+  border-radius: 10px;
 }
