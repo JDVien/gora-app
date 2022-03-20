@@ -513,6 +513,195 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        content: "I would say probably not",
+        userId: 1,
+        questionId: 25,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "It depends, how young are you talking?",
+        userId: 3,
+        questionId: 25,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Dude those games scare me and I'm def not a kid",
+        userId: 4,
+        questionId: 25,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Too many jump scares for me! can't handle the stress",
+        userId: 4,
+        questionId: 26,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "It was at the time, idk about now...",
+        userId: 1,
+        questionId: 26,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "There are some really good ones out there, especially nowadays",
+        userId: 2,
+        questionId: 26,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Manhunt! Totally forgot about that game",
+        userId: 1,
+        questionId: 27,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Can you believe Rockstar used to make things like this? Times have changed",
+        userId: 2,
+        questionId: 27,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Great concept, okay game",
+        userId: 3,
+        questionId: 27,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Oxenfree. All about the story in that one",
+        userId: 2,
+        questionId: 28,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Silent Hill series is good",
+        userId: 3,
+        questionId: 28,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Nothing is going to match the Last of Us in that regard",
+        userId: 4,
+        questionId: 28,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "heavily Dracula influence going on here",
+        userId: 3,
+        questionId: 29,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "You can see the Lovecraft influence in the monsters at least. Idk about locations",
+        userId: 4,
+        questionId: 29,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I read they used a lot of architecture from Romania and Czech Republic as inspiration",
+        userId: 1,
+        questionId: 29,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Idk but I haven't seen the same one twice. only played a few times, though",
+        userId: 4,
+        questionId: 30,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "There are six possible endings",
+        userId: 1,
+        questionId: 30,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "There are several but they all fall into 'good' or 'bad' categories",
+        userId: 2,
+        questionId: 30,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "That game freaked me out when i was younger",
+        userId: 1,
+        questionId: 31,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "That's probably why most are first-person",
+        userId: 2,
+        questionId: 31,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "There are some great ones with a third-person perspective, Silent Hill for one",
+        userId: 3,
+        questionId: 31,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Silent Hill 2 feels more like true horror, so that gets my vote",
+        userId: 1,
+        questionId: 32,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Silent Hill 2 by far!",
+        userId: 2,
+        questionId: 32,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I agree with what the others said. Silent Hill 2.",
+        userId: 3,
+        questionId: 32,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Great game! No dialogue and I still felt connected to that kid",
+        userId: 3,
+        questionId: 33,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "Good game, so sad though",
+        userId: 2,
+        questionId: 33,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        content: "I loved this game! Wished it was longer though",
+        userId: 4,
+        questionId: 33,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
    ], {});
   },
 
