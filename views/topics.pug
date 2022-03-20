@@ -2,14 +2,13 @@ extends layout.pug
 
 block content
     script(src='/javascripts/questions.js' type='module')
+    script(src='/javascripts/topics-carousel.js' type='module')
+    link(rel='stylesheet' href='/stylesheets/questions.css')
     div
         h1(id='topic')= topic.name
-    div
-        for question in allQuestions
-            div(class='question-divs' id=`question-container-${question.id}` style={'padding': '20px', 'border': '4px solid black'})
-                a= question.title
-                a= question.content
-                img(src=question.imgLink)
-                //- if(question.Answers)
-                for answer in question.Answers
-                    a(style={'padding': '10px', 'border': '4px solid black' })= answer.content
+    div(id='question-carousel-container')
+        div(class='carousel_actions')
+            button(id="carousel_button--prev") <
+        div(class='carousel')
+        div(class='carousel_actions')
+            button(id="carousel_button--next") >
