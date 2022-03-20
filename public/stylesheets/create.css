@@ -8,6 +8,15 @@ body, html {
     box-sizing: border-box;
 }
 
+select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
 /* Form styling */
 .create-form {
     display: flex;
@@ -36,7 +45,7 @@ body, html {
     color: rgb(43, 18, 23);
     right: 0;
     margin: 20px;
-    width: 350px;
+    width: 550px;
     padding: 16px;
     background-color: rgb(105, 104, 104);
     opacity: 80%;
@@ -46,6 +55,16 @@ body, html {
 textarea:focus, input[type=text]:focus {
     background-color: #ddd;
     outline: none;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
 }
 
 /* Submit button styling */
@@ -69,6 +88,12 @@ textarea:focus, input[type=text]:focus {
 
 .text-boxes {
     width: 80%;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
 }
 #content-area {
     height: 100px;
