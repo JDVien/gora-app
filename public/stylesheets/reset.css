@@ -2,11 +2,12 @@ body {
   padding: 50px;
   background-color: rgb(8, 8, 8);
   color: white;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #topic {
   margin-left: 50px;
+  text-align: center;
 }
 
 /*
@@ -69,7 +70,7 @@ nav {
 
 h1 {
   font-size: 2rem;
-  font-family: "Nosifer", cursive;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(182, 15, 48);
 }
 
@@ -144,7 +145,7 @@ li {
 
 #user-logout {
   font-weight: bold;
-  font-family: "Nosifer", cursive;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px;
   padding: 10px;
   opacity: 90%;
@@ -158,8 +159,9 @@ li {
 }
 
 #profile {
-  font-weight: bold;
-  font-family: "Nosifer", cursive;
+  /* font-weight: bold; */
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   border-radius: 10px;
 }
@@ -171,7 +173,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px Arial, Helvetica, sans-serif;
 }
 
 .horizontal-nav a:hover {
