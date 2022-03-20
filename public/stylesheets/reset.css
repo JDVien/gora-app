@@ -198,9 +198,13 @@ a {
 
 * {
   box-sizing: border-box;
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /* font-family: "Nosifer", cursive; */
+  font-family: "Nosifer", cursive;
   font-size: 16px;
+}
+
+p {
+  font-weight: bold;
+  font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 .horizontal-nav a:hover {
@@ -240,9 +244,9 @@ a {
 }
 
 #footer {
-  margin-left: 200px;
-  font-family: "Nosifer", cursive;
+  margin-left: 245px;
   color: rgb(105, 104, 104);
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 /* #ask-a-question {
   padding: 5px;
