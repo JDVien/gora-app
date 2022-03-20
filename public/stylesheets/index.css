@@ -77,14 +77,22 @@ a {
   font-family: "Nosifer", cursive;
 }
 
+.search-items {
+  position: relative;
+  margin-left: 500px;
+  margin-right: 500px;
+  display: flex;
+  align-items: center;
+}
+
 .search-container {
   margin-left: 300px;
   margin-right: 300px;
 }
 
 .search-icon {
-  height: 40px;
-  width: 40px;
+  height: 80px;
+  width: 80px;
   opacity: 40%;
 }
 
