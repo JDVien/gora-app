@@ -5,6 +5,7 @@ include utils.pug
 block content
     script(src='/javascripts/question-details.js' type='module')
     script(src='/javascripts/answers.js' type='module')
+    script(src='/javascripts/comments.js' type='module')
     link(rel='stylesheet' href='/stylesheets/edit.css')
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
@@ -49,11 +50,36 @@ block content
                 div(class=`answer-container` id=`answer-container-${answer.id}`)
                     h3= answer.content
                     p= answer.User.username
-                    //- p(id=`answer-content-${answer.id}`)= answer.content
                     if activeUser === answer.userId
+                        div(id='body-btns')
                         a(href=`/answers/delete/${answer.id}` onclick="return confirm('Are you sure you want to delete this answer?');" class='delete-answer' id=`delete-answer-${answer.id}`) Delete
                         button(class='edit-answer-btn' id=`edit-answer-btn-${answer.id}`) Edit
                         form(class='hidden' id=`edit-answer-form-${answer.id}`)
                             label(for="content") Content:
                             input(type="text" name='content' value=answer.content id=`content-field-${answer.id}`)
                             button(class='edit-submit-btn' id=`submit-answer-btn-${answer.id}`) Submit Edit
+                    div(id='comment-form-container')
+                        div(id='comment-answer-btn')
+                            if activeUser !== answer.userId
+                                button(class='create-comment' id=`create-comment-${answer.id}`) Reply
+                                +validationErrorSummary(commentErrors)
+                                form(action=`/comments/new` method='post' class='hidden' id=`comment-form-${answer.id}`)
+                                    input(type='hidden' name='_csrf' value=csrfToken)
+                                    input(type='hidden' name='answerId' value=answer.id)
+                                    label(for="content") Content:
+                                    input(type="text" name='content' value='')
+                                    button(class='comment-submit-btn' id=`comment-btn-${answer.id}`) Submit Comment
+                for comment in answer.Comments
+                    div(class=`comment-container` id=`comment-container-${comment.id}`)
+                        div(id='comment-body')
+                            h4= comment.content
+                            p= comment.User.username
+                            if activeUser === comment.userId
+                                div(id='body-btns')
+                                    button(href=`/comments/delete/${comment.id}` onclick="return confirm('Are you sure you want to delete this comment?');" class='delete-comment' id=`delete-comment-${comment.id}`) Delete
+                                    button(class='edit-comment-btn' id=`edit-comment-btn-${comment.id}`) Edit
+                                    form(class='hidden' id=`edit-comment-form-${comment.id}`)
+                                        label(for='content') Content:
+                                        input(type='text' name='content' value=comment.content id=`content-field-${comment.id}`)
+                                        button(class='edit-submit-btn' id=`submit-comment-btn-${comment.id}`) Submit Edit
+                        //- p(id=`answer-content-${answer.id}`)= answer.content
