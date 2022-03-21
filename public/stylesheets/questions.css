@@ -1,10 +1,20 @@
 .carousel {
   overflow: hidden;
   max-width: 1000px;
+  min-width: 1200px;
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
+  opacity: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s linear, color;
+}
+
+.end-state .carousel {
+  transform: translateX(-440px);
+  color: black;
+  opacity: 0;
 }
 
 .carousel .carousel_item,
@@ -12,11 +22,11 @@
   display: none;
 }
 .carousel .carousel_item img {
-  width: 100%;
   max-width: 1000px;
   height: 670px;
   border-radius: 10px;
 }
+
 .carousel .carousel_item--visible {
   display: block;
 }
@@ -37,6 +47,7 @@
   height: 60px;
   opacity: 45%;
   background: rgb(0, 0, 0);
+
 }
 
 .carousel_actions button:hover {
@@ -58,6 +69,7 @@
 }
 .carousel .carousel_actions button#carousel_button--prev {
   margin-left: 20px;
+
 }
 .carousel .carousel_actions button#carousel_button--next {
   margin-right: 20px;
@@ -67,13 +79,11 @@
   background-color: rgb(26, 26, 26);
   margin-left: 240px;
   margin-top: 75px;
-  display: flex;
+  min-width: 1000px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 5px;
   /* height: 100%; */
 }
-/* .question-divs {
-  transition: margin-right 2s <timing-function> <delay>;
-} */

@@ -50,8 +50,15 @@
   document.
   getElementById('carousel_button--next')
   .addEventListener("click", (e) => {
+
     moveToNextSlide();
+
+
   });
+  // document.getElementById('carousel_button--next')
+  // .addEventListener('mouseout', (e) => {
+  //  document.body.classList.toggle('end-state')
+  // })
 
   document.
   getElementById('carousel_button--prev')
@@ -65,6 +72,7 @@
       slide.classList.add('carousel_item--hidden');
     }
     slides[slidePosition].classList.add('carousel_item--visible');
+    document.body.classList.toggle('end-state')
   }
 
   function moveToNextSlide() {

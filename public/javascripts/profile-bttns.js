@@ -19,7 +19,9 @@ window.addEventListener("DOMContentLoaded", event => {
       questionDiv.classList.remove('hidden')
       answerDiv.classList.add('hidden')
       commentDiv.classList.add('hidden')
+
     }
+    document.body.classList.toggle('end-state')
   }
   commentBtn.onclick = function () {
     if (commentDiv.classList.contains('hidden')) {

@@ -5,10 +5,13 @@ const editBtn = document.querySelector(".edit-button");
          const questionId = e.target.id.split('-')[2];
          const form = document.getElementById(`edit-form-${questionId}`)
          if (form.classList.contains('hidden')) {
-             form.classList.remove('hidden')
+              form.classList.remove('hidden')
+
             } else {
                 form.classList.add('hidden')
+
             }
+            document.body.classList.toggle('end-state')
         });
 
         const deleteQueBtn = document.querySelector(".delete-question");

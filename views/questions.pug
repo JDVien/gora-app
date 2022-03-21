@@ -1,12 +1,14 @@
 extends layout.pug
 
 block content
-    //- script(src='/javascripts/questions.js' type='module')
+    script(src='/javascripts/questions.js' type='module')
     script(src='/javascripts/questions-carousel.js' type='module')
     link(rel='stylesheet' href='/stylesheets/questions.css')
     div(id='question-carousel-container')
-        div(class='carousel_actions')
-            button(id="carousel_button--prev") <
-        div(class='carousel')
-        div(class='carousel_actions')
-            button(id="carousel_button--next") >
+        div(class='carousel-bttn-one')
+            div(class='carousel_actions')
+                button(id="carousel_button--prev") <
+        div(class='carousel linear')
+        div(class='carousel-bttn-two')
+         div(class='carousel_actions')
+              button(id="carousel_button--next") >

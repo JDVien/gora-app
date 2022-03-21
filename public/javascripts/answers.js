@@ -7,8 +7,9 @@ answerBtn.addEventListener('click', (e) => {
         form.classList.remove('hidden')
     } else {
         form.classList.add('hidden')
-    }
 
+    }
+    document.body.classList.toggle('end-state')
     // const submitBtn = document.getElementById(`edit-btn-${questionId}`)
     // submitBtn.addEventListener('click', async(subEvent) => {
     //     subEvent.preventDefault()
@@ -35,6 +36,7 @@ for (let i = 0; i < editBtnsAnswers.length; i++) {
         const form = document.getElementById(`edit-answer-form-${answerId}`)
         if (form.classList.contains('hidden')) {
             form.classList.remove('hidden')
+            document.body.classList.toggle('end-state')
         } else {
             form.classList.add('hidden')
         }
