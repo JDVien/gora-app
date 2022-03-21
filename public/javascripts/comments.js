@@ -1,15 +1,32 @@
-const commentBtn = document.querySelector(".create-comment");
-if(commentBtn) {
+const allCommentbtn = document.querySelectorAll(".create-comment");
+console.log(allCommentbtn)
+for (let i = 0; i < allCommentbtn.length; i++) {
+  const commentBtn = allCommentbtn[i];
+  console.log(commentBtn)
   commentBtn.addEventListener("click", e => {
-    const answerId = e.target.id.split('-')[2];
-    const form = document.getElementById(`comment-form-${answerId}`)
-    if (form.classList.contains('hidden')) {
+    const commentBtnId = e.target.id.split('-')[2]
+    console.log(commentBtnId)
+    const form = document.getElementById(`comment-form-${commentBtnId}`)
+  if (form.classList.contains('hidden')) {
       form.classList.remove('hidden')
-    } else {
-      form.classList.add('hidden')
-    }
-  })
+  } else {
+    form.classList.add('hidden')
+  }
+})
 }
+
+// const commentBtn = document.querySelector(".create-comment");
+// if(commentBtn) {
+//   commentBtn.addEventListener("click", e => {
+//     const answerId = e.target.id.split('-')[2];
+//     const form = document.getElementById(`comment-form-${answerId}`)
+//     if (form.classList.contains('hidden')) {
+//       form.classList.remove('hidden')
+//     } else {
+//       form.classList.add('hidden')
+//     }
+//   })
+// }
 
   const editBtnComments = document.querySelectorAll(`.edit-comment-btn`)
 
@@ -40,7 +57,7 @@ if(commentBtn) {
       const returnData = await res.json()
 
       if (returnData.message === 'Success') {
-        window.location.replace(`/questions/${returnData.comment.answerId}`)
+        window.location.replace(`/questions/${returnData.comment.questionId}`)
       }
     })
   })
