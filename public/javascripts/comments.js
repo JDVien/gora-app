@@ -58,6 +58,7 @@ for (let i = 0; i < allCommentbtn.length; i++) {
 
       if (returnData.message === 'Success') {
         window.location.replace(`/questions/${returnData.comment.questionId}`)
+        location.reload(true)
       }
     })
   })

@@ -54,7 +54,7 @@ router.patch('/:id(\\d+)', async(req, res) => {
   const comment = await db.Comment.findByPk(req.params.id, {
       include: db.User
   })
-
+  const answer = await db.Answer.findByPk(comment.answerId)
   if (!(req.body.content.length > 1)) {
       res.json({message: "Please provide a valid update"})
   }
@@ -63,6 +63,7 @@ router.patch('/:id(\\d+)', async(req, res) => {
       comment.content = req.body.content
       await comment.save()
       res.json({message: "Success", comment})
+
   } else {
       res.json({message: "Could not find post please try again"})
   }
@@ -72,9 +73,9 @@ router.patch('/:id(\\d+)', async(req, res) => {
 router.get('/delete/:id(\\d+)', requireAuth, csrfProtection, asyncHandler(async (req, res) => {
   const commentId = parseInt(req.params.id, 10);
   const comment = await db.Comment.findByPk(commentId);
-  
+  const answer = await db.Answer.findByPk(comment.answerId)
   await comment.destroy();
-  res.redirect(`/questions/${comment.answerId}`);
+  res.redirect(`/questions/${answer.questionId}`);
 }))
 
 module.exports = router;

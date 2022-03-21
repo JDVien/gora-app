@@ -6,16 +6,16 @@
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
-  opacity: 100%;
+  /* opacity: 100%;
   transform: translateX(0);
-  transition: transform 0.5s linear, color;
+  transition: transform 0.5s linear, color; */
 }
 
-.end-state .carousel {
+/* .end-state .carousel {
   transform: translateX(-440px);
   color: black;
   opacity: 0;
-}
+} */
 
 .carousel .carousel_item,
 .carousel .carousel_item--hidden {

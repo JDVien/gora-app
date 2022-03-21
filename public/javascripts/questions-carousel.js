@@ -52,8 +52,6 @@
   .addEventListener("click", (e) => {
 
     moveToNextSlide();
-
-
   });
   // document.getElementById('carousel_button--next')
   // .addEventListener('mouseout', (e) => {
@@ -72,7 +70,7 @@
       slide.classList.add('carousel_item--hidden');
     }
     slides[slidePosition].classList.add('carousel_item--visible');
-    document.body.classList.toggle('end-state')
+    // document.body.classList.toggle('end-state')
   }
 
   function moveToNextSlide() {

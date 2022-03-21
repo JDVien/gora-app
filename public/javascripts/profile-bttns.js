@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", event => {
       commentDiv.classList.add('hidden')
 
     }
-    document.body.classList.toggle('end-state')
+    // document.body.classList.toggle('end-state')
   }
   commentBtn.onclick = function () {
     if (commentDiv.classList.contains('hidden')) {

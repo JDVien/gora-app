@@ -11,7 +11,7 @@ const editBtn = document.querySelector(".edit-button");
                 form.classList.add('hidden')
 
             }
-            document.body.classList.toggle('end-state')
+            // document.body.classList.toggle('end-state')
         });
 
         const deleteQueBtn = document.querySelector(".delete-question");
@@ -42,5 +42,19 @@ const editBtn = document.querySelector(".edit-button");
                 }
             })
 
+        }
+
+        const deleteComBtn = document.querySelector(".delete-comment");
+
+        if(deleteComBtn) {
+            deleteComBtn.addEventListener('click', (e) => {
+                const commentId = e.target.id.split('-')[2];
+                const form = document.getElementById(`delete-comment-${commentId}`)
+                if (form.classList.contains('hidden')) {
+                    form.classList.remove('hidden')
+                } else {
+                    form.classList.add('hidden')
+                }
+            })
         }
     }
