@@ -253,7 +253,7 @@ p {
 }
 
 #footer {
-  margin-left: 245px;
+  text-align: center;
   color: rgb(141, 140, 140);
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
